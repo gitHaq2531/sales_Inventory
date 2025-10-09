@@ -18,7 +18,7 @@ import genericUtility.FileUtility;
 public class SuperBaseClass
 {
 	public WebDriver driver=null;
-	static String browser=null;
+	public static String browser=null;
 	FileUtility futils=new FileUtility();
 	
 	@BeforeSuite
