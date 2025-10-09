@@ -1,17 +1,21 @@
 package genericUtility;
 
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Properties;
 
 public class FileUtility 
 {
-public String getDataFromPropertyFile(String key) throws IOException
+public String getDataFromPropertyFile(String key)
 {
-	FileInputStream fis=new FileInputStream("path");
-	Properties pobj=new Properties();
-	pobj.load(fis);
-	String data=pobj.getProperty(key);
+	String data=null;
+	try {
+		FileInputStream fis=new FileInputStream("path");
+		Properties pobj=new Properties();
+		pobj.load(fis);
+		data=pobj.getProperty(key);
+		}
+		catch (Exception e) {
+		}
 	return data;
 }
 }
