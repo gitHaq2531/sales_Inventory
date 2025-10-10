@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import genericUtility.FileUtility;
 import genericUtility.WebDriverUtility;
 
 public class LoginPage {
@@ -35,31 +36,44 @@ public class LoginPage {
 	public WebElement getPasswordEdt() {
 		return passwordEdt;
 	}
-	
 	public WebElement getLoginbtn() {
 		return loginbtn;
 	}
-	public void loginAsAdmin(String url,String username,String password) {
+	public void loginAsAdmin(String username,String password) {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.select(loginTypeOptions, 4);
+		wb.selectByVisibleText(loginTypeOptions,"Admin");
 	    loginbtn.click();			
 	}	
-	public void loginAsRetailer(String url,String username,String password) {
+	public void loginAsRetailer(String username,String password) {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.select(loginTypeOptions, 2);
+		wb.selectByVisibleText(loginTypeOptions,"Retailer");
 		loginbtn.click();		
 	}
 	
-	public void loginAsManufacturer(String url,String username,String password) {
+	public void loginAsManufacturer(String username,String password) {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.select(loginTypeOptions, 3);
+		wb.selectByVisibleText(loginTypeOptions, "Manufacturer");
 		loginbtn.click();
+	}
+	
+	/**
+	 * @author Harshali
+	 */
+	public void loginAsRetailerSamshop() {
+		FileUtility fLib=new FileUtility();
+		WebDriverUtility wLib=new WebDriverUtility();
+		String username=fLib.getDataFromPropertyFile("retailerUn");
+		String password=fLib.getDataFromPropertyFile("retailerPw");
+		usernameEdt.sendKeys(username);
+		passwordEdt.sendKeys(password);
+		wLib.selectByVisibleText(loginTypeOptions,"Retailer");
+		getLoginbtn().click();
 	}
 
 }
