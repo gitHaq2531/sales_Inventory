@@ -40,7 +40,7 @@ public class LoginPage {
 		return loginbtn;
 	}
 	public void loginAsAdmin(String url,String username,String password) {
-		
+		System.out.println("hi");
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
 		wb.selectByVisibleText(loginTypeOptions,"Admin");
