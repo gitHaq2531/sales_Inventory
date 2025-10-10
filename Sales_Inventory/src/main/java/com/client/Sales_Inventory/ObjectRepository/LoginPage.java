@@ -52,15 +52,9 @@ public class LoginPage {
 		String AdminPw = flu.getDataFromPropertyFile("adminPw");
 		usernameEdt.sendKeys(AdminUn);
 		passwordEdt.sendKeys(AdminPw);
+		wb.selectByVisibleText(loginTypeDD, "Admin");
 	}
-	public void loginAsAdmin(String username,String password) {
-
-		usernameEdt.sendKeys(username);
-		passwordEdt.sendKeys(password);
-
-		wb.selectByVisibleText(loginTypeDD,"Admin");
-	    loginbtn.click();			
-	}	
+	
 	public void loginAsRetailer(String username,String password) {
 		
 		usernameEdt.sendKeys(username);
