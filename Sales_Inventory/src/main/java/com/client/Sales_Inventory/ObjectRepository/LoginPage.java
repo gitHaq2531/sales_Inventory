@@ -51,7 +51,7 @@ public class LoginPage {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.selectByVisibleText(loginTypeOptions,"Retailer");
+		wb.select(loginTypeOptions,2);
 		loginbtn.click();		
 	}
 	
