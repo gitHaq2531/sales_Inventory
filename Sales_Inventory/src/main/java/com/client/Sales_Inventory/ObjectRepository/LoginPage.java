@@ -23,7 +23,13 @@ public class LoginPage {
 	@FindBy(name="txtPassword")
 	private WebElement passwordEdt;
 	
+	@FindBy(id="login:type")
+	private WebElement loginTypeDD;
 	
+	public WebElement getLoginTypeDD() {
+		return loginTypeDD;
+	}
+
 	@FindBy(xpath="//div[@class='input-box']/descendant::option")
 	private WebElement loginTypeOptions;
 	
@@ -39,9 +45,8 @@ public class LoginPage {
 	public WebElement getLoginbtn() {
 		return loginbtn;
 	}
-	public void loginAsAdmin(String url,String username,String password) {
-		System.out.println("hi");
-		System.out.println("Excute method");
+	public void loginAsAdmin(String username,String password) {
+
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
 		wb.selectByVisibleText(loginTypeOptions,"Admin");
@@ -51,7 +56,7 @@ public class LoginPage {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.select(loginTypeOptions,4);
+		wb.selectByVisibleText(loginTypeOptions,"Retailer");
 		loginbtn.click();		
 	}
 	
@@ -73,7 +78,7 @@ public class LoginPage {
 		String password=fLib.getDataFromPropertyFile("retailerPw");
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wLib.select(loginTypeOptions,3);
+		wLib.selectByVisibleText(loginTypeDD,"Retailer");
 		getLoginbtn().click();
 	}
 

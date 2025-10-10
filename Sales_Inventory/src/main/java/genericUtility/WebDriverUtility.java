@@ -16,7 +16,7 @@ public class WebDriverUtility {
 	 */
 	public void selectByVisibleText(WebElement element, String visibletext) {
 		Select sel=new Select(element);
-		sel.deselectByVisibleText(visibletext);
+		sel.selectByVisibleText(visibletext);
 	}
 
 }
