@@ -51,7 +51,7 @@ public class LoginPage {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.select(loginTypeOptions,2);
+		wb.select(loginTypeOptions,3);
 		loginbtn.click();		
 	}
 	
