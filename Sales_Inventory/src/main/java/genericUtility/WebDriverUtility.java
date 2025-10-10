@@ -10,5 +10,13 @@ public class WebDriverUtility {
 		Select sel=new Select(element);
 		sel.selectByIndex(index);
 	}
+	
+	/**
+	 * @author Harshali
+	 */
+	public void selectByVisibleText(WebElement element, String visibletext) {
+		Select sel=new Select(element);
+		sel.deselectByVisibleText(visibletext);
+	}
 
 }
