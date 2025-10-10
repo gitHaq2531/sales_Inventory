@@ -41,6 +41,7 @@ public class LoginPage {
 	}
 	public void loginAsAdmin(String url,String username,String password) {
 		System.out.println("hi");
+		System.out.println("Excute method");
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
 		wb.selectByVisibleText(loginTypeOptions,"Admin");
