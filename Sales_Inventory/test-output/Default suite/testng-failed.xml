@@ -5,7 +5,13 @@
     <classes>
       <class name="com.client.SalesInventory.Module.SampleTestClass">
         <methods>
+          <include name="beforeClassConfigMethod"/>
+          <include name="beforeSuitConfigMethod"/>
           <include name="test"/>
+          <include name="configBeforeMethod"/>
+          <include name="configAfterMethod"/>
+          <include name="afterClassConfigMethod"/>
+          <include name="afterSuiteConfigMethod"/>
         </methods>
       </class> <!-- com.client.SalesInventory.Module.SampleTestClass -->
     </classes>

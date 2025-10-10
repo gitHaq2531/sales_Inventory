@@ -67,7 +67,7 @@ public class SuperBaseClass
 			url=test.getParameter("url");
 			if(url==null)
 			{
-				browser=futils.getDataFromPropertyFile("url");
+				url=futils.getDataFromPropertyFile("url");
 			}
 		}
 		driver.get(url);
