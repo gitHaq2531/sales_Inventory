@@ -24,7 +24,7 @@ public class LoginPage {
 	private WebElement passwordEdt;
 	
 	
-	@FindBy(xpath="//div[@class='input-box']/descendant::option")
+	@FindBy(id="login:type")
 	private WebElement loginTypeOptions;
 	
 	@FindBy(xpath="//input[@type='submit']")
@@ -39,11 +39,12 @@ public class LoginPage {
 	public WebElement getLoginbtn() {
 		return loginbtn;
 	}
-	public void loginAsAdmin(String url,String username,String password) {
-		System.out.println("hi");
-		System.out.println("Excute method");
-		usernameEdt.sendKeys(username);
-		passwordEdt.sendKeys(password);
+	public void loginAsAdmin() {
+		FileUtility flu=new FileUtility();
+		String AdminUn = flu.getDataFromPropertyFile("adminUn");
+		String AdminPw = flu.getDataFromPropertyFile("adminPw");
+		usernameEdt.sendKeys(AdminUn);
+		passwordEdt.sendKeys(AdminPw);
 		wb.selectByVisibleText(loginTypeOptions,"Admin");
 	    loginbtn.click();			
 	}	
