@@ -1,48 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-10T15:51:06 IST" name="Default suite" finished-at="2025-10-10T15:51:15 IST" duration-ms="8705">
+  <suite started-at="2025-10-10T17:53:03 IST" name="Default suite" finished-at="2025-10-10T17:53:14 IST" duration-ms="10432">
     <groups>
+      <group name="smoke">
+        <method signature="LoginToApp.loginAsAdmin()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@408d971b]" name="loginAsAdmin" class="com.client.SalesInventory.Login.LoginToApp"/>
+        <method signature="LoginToApp.loginAsRetailer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@408d971b]" name="loginAsRetailer" class="com.client.SalesInventory.Login.LoginToApp"/>
+        <method signature="LoginToApp.loginToManufacturer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@408d971b]" name="loginToManufacturer" class="com.client.SalesInventory.Login.LoginToApp"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-10-10T15:51:06 IST" name="Default test" finished-at="2025-10-10T15:51:15 IST" duration-ms="8705">
-      <class name="com.client.SalesInventory.Module.SamplAdminTest">
-        <test-method is-config="true" signature="beforeSuitConfigMethod()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T15:51:06 IST" name="beforeSuitConfigMethod" finished-at="2025-10-10T15:51:06 IST" duration-ms="18" status="PASS">
+    <test started-at="2025-10-10T17:53:03 IST" name="Default test" finished-at="2025-10-10T17:53:14 IST" duration-ms="10432">
+      <class name="com.client.SalesInventory.Login.LoginToApp">
+        <test-method is-config="true" signature="beforeSuitConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@408d971b]" started-at="2025-10-10T17:53:03 IST" name="beforeSuitConfigMethod" finished-at="2025-10-10T17:53:03 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuitConfigMethod -->
-        <test-method is-config="true" signature="beforeClassConfigMethod(org.testng.xml.XmlTest)[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T15:51:06 IST" name="beforeClassConfigMethod" finished-at="2025-10-10T15:51:13 IST" duration-ms="6827" status="PASS">
+        <test-method is-config="true" signature="beforeClassConfigMethod(org.testng.xml.XmlTest)[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@408d971b]" started-at="2025-10-10T17:53:03 IST" name="beforeClassConfigMethod" finished-at="2025-10-10T17:53:06 IST" duration-ms="2477" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@92f07392]]>
+                <![CDATA[org.testng.xml.XmlTest@e8244aec]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClassConfigMethod -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T15:51:13 IST" name="configBM" finished-at="2025-10-10T15:51:14 IST" duration-ms="747" status="PASS">
+        <test-method signature="loginAsAdmin()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@408d971b]" started-at="2025-10-10T17:53:06 IST" name="loginAsAdmin" finished-at="2025-10-10T17:53:07 IST" duration-ms="1147" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configBM -->
-        <test-method signature="SampleTest()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T15:51:14 IST" name="SampleTest" finished-at="2025-10-10T15:51:14 IST" duration-ms="23" status="PASS">
+        </test-method> <!-- loginAsAdmin -->
+        <test-method signature="loginAsRetailer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@408d971b]" started-at="2025-10-10T17:53:07 IST" name="loginAsRetailer" finished-at="2025-10-10T17:53:10 IST" duration-ms="3061" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SampleTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T15:51:14 IST" name="configAM" finished-at="2025-10-10T15:51:14 IST" duration-ms="473" status="PASS">
+        </test-method> <!-- loginAsRetailer -->
+        <test-method signature="loginToManufacturer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@408d971b]" started-at="2025-10-10T17:53:10 IST" name="loginToManufacturer" finished-at="2025-10-10T17:53:13 IST" duration-ms="3147" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="afterClassConfigMethod()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T15:51:14 IST" name="afterClassConfigMethod" finished-at="2025-10-10T15:51:15 IST" duration-ms="533" status="PASS">
+        </test-method> <!-- loginToManufacturer -->
+        <test-method is-config="true" signature="afterClassConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@408d971b]" started-at="2025-10-10T17:53:13 IST" name="afterClassConfigMethod" finished-at="2025-10-10T17:53:14 IST" duration-ms="524" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClassConfigMethod -->
-        <test-method is-config="true" signature="afterSuiteConfigMethod()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T15:51:15 IST" name="afterSuiteConfigMethod" finished-at="2025-10-10T15:51:15 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterSuiteConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@408d971b]" started-at="2025-10-10T17:53:14 IST" name="afterSuiteConfigMethod" finished-at="2025-10-10T17:53:14 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuiteConfigMethod -->
-      </class> <!-- com.client.SalesInventory.Module.SamplAdminTest -->
+      </class> <!-- com.client.SalesInventory.Login.LoginToApp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

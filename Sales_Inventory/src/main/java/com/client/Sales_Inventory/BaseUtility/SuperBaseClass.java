@@ -21,14 +21,14 @@ public class SuperBaseClass
 	public static String browser=null;
 	FileUtility futils=new FileUtility();
 	
-	@BeforeSuite
+	@BeforeSuite (alwaysRun=true)
 	public void beforeSuitConfigMethod()
 	{
 		System.out.println("suit level configuration start");
 		System.out.println("database connected");
 	}
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void beforeClassConfigMethod(XmlTest test)
 	{
 		System.out.println("class level configuration start");
@@ -74,7 +74,7 @@ public class SuperBaseClass
 		System.out.println("browser launched and appllication opened");
 	}
 	
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void afterClassConfigMethod()
 	{
 		driver.manage().window().minimize();
@@ -82,7 +82,7 @@ public class SuperBaseClass
 		UtilityClassObject.removerDriver(); //to remove all the local driver instances from thread local...
 		System.out.println("browser closed...");
 	}
-	@AfterSuite
+	@AfterSuite(alwaysRun=true)
 	public void afterSuiteConfigMethod()
 	{
 		System.out.println("databse connection closed...");
