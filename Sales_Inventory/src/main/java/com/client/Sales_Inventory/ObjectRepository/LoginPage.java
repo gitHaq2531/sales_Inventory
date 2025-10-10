@@ -39,14 +39,14 @@ public class LoginPage {
 	public WebElement getLoginbtn() {
 		return loginbtn;
 	}
-	public void loginAsAdmin(String url,String username,String password) {
+	public void loginAsAdmin(String username,String password) {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
 		wb.select(loginTypeOptions, 4);
 	    loginbtn.click();			
 	}	
-	public void loginAsRetailer(String url,String username,String password) {
+	public void loginAsRetailer(String username,String password) {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
@@ -54,7 +54,7 @@ public class LoginPage {
 		loginbtn.click();		
 	}
 	
-	public void loginAsManufacturer(String url,String username,String password) {
+	public void loginAsManufacturer(String username,String password) {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
