@@ -39,7 +39,7 @@ public class LoginPage {
 	public WebElement getLoginbtn() {
 		return loginbtn;
 	}
-	public void loginAsAdmin(String username,String password) {
+	public void loginAsAdmin(String url,String username,String password) {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
