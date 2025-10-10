@@ -4,9 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.client.Sales_Inventory.BaseUtility.RetailerBaseClass;
 import com.client.Sales_Inventory.BaseUtility.SuperBaseClass;
 @Listeners(com.client.Sales_Inventory.ListenerUtility.ListenerImpClass.class)
-public class SampleTestClass{
+public class SampleTestClass extends RetailerBaseClass{
 
 	@Test
 	public void test() {
