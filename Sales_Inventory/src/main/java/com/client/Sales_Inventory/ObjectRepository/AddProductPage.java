@@ -5,7 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import genericUtility.WebDriverUtility;
+
 public class AddProductPage {
+	WebDriverUtility wb=new WebDriverUtility();
 	WebDriver driver;
 	public AddProductPage(WebDriver driver) {
 		this.driver=driver;
@@ -18,5 +21,80 @@ public class AddProductPage {
 	@FindBy(id="product:price")
 	private WebElement price;
 	
+	@FindBy(id="product:unit")
+	private WebElement unitType;
+	
+	@FindBy(id="product:category")
+	private WebElement Pcategory;
+		
+	@FindBy(xpath="//input[@value='1']")
+	private WebElement enable;
+	
+	@FindBy(xpath="//input[@value='2']")
+	private WebElement disable;
+	
+	@FindBy(id="product:description")
+	private WebElement description;
+	
+	@FindBy(xpath="//input[@value='Add Product']")
+	private WebElement add;
+	
+	
+	public WebElement getUnitType() {
+		return unitType;
+	}
+	public WebElement getPcategory() {
+		return Pcategory;
+	}
 
+	public WebElement getAdd() {
+		return add;
+	}
+
+	public WebElement getEnable() {
+		return enable;
+	}
+
+	public WebElement getDisable() {
+		return disable;
+	}
+	
+	
+	public void selectEnable() {
+		enable.click();
+	}
+				
+	public void selectDisable() {
+		disable.click();
+	}
+	
+	public void selectUnit(String unit) {
+		wb.selectByVisibleText(unitType, unit);
+	}
+	
+	public void selectCategory(String category) {
+		wb.selectByVisibleText(Pcategory, category);
+	}
+	
+	public void clickAddproduct() {
+		getAdd().click();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

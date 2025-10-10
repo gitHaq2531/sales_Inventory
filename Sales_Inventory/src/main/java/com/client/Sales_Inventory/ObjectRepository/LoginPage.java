@@ -34,8 +34,6 @@ public class LoginPage {
 		return loginTypeDD;
 	}
 
-	
-	
 	public WebElement getUsernameEdt() {
 		return usernameEdt;
 	}
@@ -53,6 +51,15 @@ public class LoginPage {
 		usernameEdt.sendKeys(AdminUn);
 		passwordEdt.sendKeys(AdminPw);
 		wb.selectByVisibleText(loginTypeDD, "Admin");
+		loginbtn.click();
+	}
+	
+public void loginAsAdmin(String username,String password) {
+		
+		usernameEdt.sendKeys(username);
+		passwordEdt.sendKeys(password);
+		wb.selectByVisibleText(loginTypeDD,"Admin");
+		loginbtn.click();		
 	}
 	
 	public void loginAsRetailer(String username,String password) {
