@@ -73,7 +73,7 @@ public class LoginPage {
 		String password=fLib.getDataFromPropertyFile("retailerPw");
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wLib.selectByVisibleText(loginTypeOptions,"Retailer");
+		wLib.select(loginTypeOptions,3);
 		getLoginbtn().click();
 	}
 
