@@ -88,4 +88,74 @@ public class LoginToApp extends SuperBaseClass{
 		
 		mhp.getLogoutBtn().click();
 	}
+	
+	@Test(groups="smoke")
+	public void loginAsAdminWithWrongPswd() {
+		LoginPage lp=new LoginPage(driver);
+		FileUtility fLib=new FileUtility();
+		WebDriverUtility wLib=new WebDriverUtility();
+		AdminHomePage ahp=new AdminHomePage(driver);
+		
+		String username=fLib.getDataFromPropertyFile("adminUn");
+		String password=fLib.getDataFromPropertyFile("wrongpw");
+		
+		lp.getUsernameEdt().sendKeys(username);
+		lp.getPasswordEdt().sendKeys(password);
+		wLib.selectByVisibleText(lp.getLoginTypeDD(), "Admin");
+		lp.getLoginbtn().click();
+		
+		String errorMsg=lp.getErrorMsg().getText();
+		
+		ahp.logOut();
+	}
+
+	@Test (groups="smoke")
+	public void loginAsRetailerWithWrongPswd() {
+		LoginPage lp=new LoginPage(driver);
+		FileUtility fLib=new FileUtility();
+		WebDriverUtility wLib=new WebDriverUtility();
+		RetailerHomePage rhp=new RetailerHomePage(driver);
+		
+		String username=fLib.getDataFromPropertyFile("retailerUn");
+		String password=fLib.getDataFromPropertyFile("retailerPw");
+		
+		lp.getUsernameEdt().sendKeys(username);
+		lp.getPasswordEdt().sendKeys(password);
+		wLib.selectByVisibleText(lp.getLoginTypeDD(), "Retailer");
+		lp.getLoginbtn().click();
+		
+		boolean flag=false;
+		String welcomeMsg=rhp.getRetailerWelcomeMsg().getText();
+		if(welcomeMsg.contains("Welcome "+username))
+		{
+			flag=true;
+		}
+		Assert.assertEquals(flag, true);
+		
+		rhp.logOut();
+	}
+	@Test (groups="smoke")
+	public void loginToManufacturerWithWrongPswd() {
+		LoginPage lp=new LoginPage(driver);
+		FileUtility fLib=new FileUtility();
+		WebDriverUtility wLib=new WebDriverUtility();
+		ManufacturerHomePage mhp=new ManufacturerHomePage(driver);
+		
+		String username=fLib.getDataFromPropertyFile("manufacturerUn");
+		String password=fLib.getDataFromPropertyFile("manufacturerPw");
+		
+		lp.getUsernameEdt().sendKeys(username);
+		lp.getPasswordEdt().sendKeys(password);
+		wLib.selectByVisibleText(lp.getLoginTypeDD(), "Manufacturer");
+		lp.getLoginbtn().click();
+		
+		String welcomeMsg=mhp.getManufactrerWelcomeMsg().getText();
+		boolean flag=false;
+		if (welcomeMsg.contains("Welcome "+username)){
+			flag=true;
+		}
+		Assert.assertEquals(flag, true);
+		
+		mhp.getLogoutBtn().click();
+	}
 }
