@@ -1,130 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2025-10-11T12:09:24 IST" name="Suite" finished-at="2025-10-11T12:09:38 IST" duration-ms="14209">
-=======
-<<<<<<< HEAD
-  <suite started-at="2025-10-10T18:43:45 IST" name="Default suite" finished-at="2025-10-10T18:43:46 IST" duration-ms="1075">
-=======
-  <suite started-at="2025-10-10T16:03:30 IST" name="Default suite" finished-at="2025-10-10T16:03:40 IST" duration-ms="9712">
->>>>>>> branch 'master' of https://github.com/gitHaq2531/sales_Inventory.git
->>>>>>> refs/remotes/Upstream/master
+  <suite started-at="2025-10-11T16:26:37 IST" name="Default suite" finished-at="2025-10-11T16:26:41 IST" duration-ms="4067">
     <groups>
-      <group name="smoke">
-        <method signature="LoginToApp.loginAsAdmin()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginAsAdmin" class="com.client.SalesInventory.Login.LoginToApp"/>
-        <method signature="LoginToApp.loginAsAdminWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginAsAdminWithWrongPswd" class="com.client.SalesInventory.Login.LoginToApp"/>
-        <method signature="LoginToApp.loginAsRetailer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginAsRetailer" class="com.client.SalesInventory.Login.LoginToApp"/>
-        <method signature="LoginToApp.loginAsRetailerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginAsRetailerWithWrongPswd" class="com.client.SalesInventory.Login.LoginToApp"/>
-        <method signature="LoginToApp.loginToManufacturer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginToManufacturer" class="com.client.SalesInventory.Login.LoginToApp"/>
-        <method signature="LoginToApp.loginToManufacturerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginToManufacturerWithWrongPswd" class="com.client.SalesInventory.Login.LoginToApp"/>
-      </group> <!-- smoke -->
+      <group name="system">
+        <method signature="RetailerProfile.verifyPostOrderInAdminOrders()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@1fa121e2]" name="verifyPostOrderInAdminOrders" class="com.client.SalesInventory.Retailer.RetailerProfile"/>
+      </group> <!-- system -->
     </groups>
-<<<<<<< HEAD
-    <test started-at="2025-10-11T12:09:24 IST" name="Test" finished-at="2025-10-11T12:09:38 IST" duration-ms="14209">
-      <class name="com.client.SalesInventory.Login.LoginToApp">
-        <test-method is-config="true" signature="beforeSuitConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:24 IST" name="beforeSuitConfigMethod" finished-at="2025-10-11T12:09:24 IST" duration-ms="10" status="PASS">
-=======
-<<<<<<< HEAD
-    <test started-at="2025-10-10T18:43:45 IST" name="Default test" finished-at="2025-10-10T18:43:46 IST" duration-ms="1075">
-      <class name="packagetest.A">
-        <test-method signature="m1()[pri:0, instance:packagetest.A@6771beb3]" started-at="2025-10-10T18:43:45 IST" name="m1" finished-at="2025-10-10T18:43:46 IST" duration-ms="1014" status="PASS">
-=======
-    <test started-at="2025-10-10T16:03:30 IST" name="Default test" finished-at="2025-10-10T16:03:40 IST" duration-ms="9712">
-      <class name="com.client.SalesInventory.Module.SamplAdminTest">
-        <test-method is-config="true" signature="beforeSuitConfigMethod()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T16:03:30 IST" name="beforeSuitConfigMethod" finished-at="2025-10-10T16:03:30 IST" duration-ms="19" status="PASS">
->>>>>>> branch 'master' of https://github.com/gitHaq2531/sales_Inventory.git
->>>>>>> refs/remotes/Upstream/master
+    <test started-at="2025-10-11T16:26:37 IST" name="Default test" finished-at="2025-10-11T16:26:41 IST" duration-ms="4067">
+      <class name="com.client.SalesInventory.Retailer.RetailerProfile">
+        <test-method is-config="true" signature="beforeSuitConfigMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@1fa121e2]" started-at="2025-10-11T16:26:37 IST" name="beforeSuitConfigMethod" finished-at="2025-10-11T16:26:37 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- m1 -->
-      </class> <!-- packagetest.A -->
-=======
         </test-method> <!-- beforeSuitConfigMethod -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="beforeClassConfigMethod(org.testng.xml.XmlTest)[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:24 IST" name="beforeClassConfigMethod" finished-at="2025-10-11T12:09:26 IST" duration-ms="2043" status="PASS">
-=======
-        <test-method is-config="true" signature="beforeClassConfigMethod(org.testng.xml.XmlTest)[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T16:03:30 IST" name="beforeClassConfigMethod" finished-at="2025-10-10T16:03:38 IST" duration-ms="7519" status="PASS">
->>>>>>> refs/remotes/Upstream/master
+        <test-method is-config="true" signature="beforeClassConfigMethod(org.testng.xml.XmlTest)[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@1fa121e2]" started-at="2025-10-11T16:26:37 IST" name="beforeClassConfigMethod" finished-at="2025-10-11T16:26:38 IST" duration-ms="1510" status="PASS">
           <params>
             <param index="0">
               <value>
-<<<<<<< HEAD
-                <![CDATA[org.testng.xml.XmlTest@e9427e84]]>
-=======
-                <![CDATA[org.testng.xml.XmlTest@ea20465a]]>
->>>>>>> refs/remotes/Upstream/master
+                <![CDATA[org.testng.xml.XmlTest@ca8f4161]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClassConfigMethod -->
-<<<<<<< HEAD
-        <test-method signature="loginAsAdmin()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:26 IST" name="loginAsAdmin" finished-at="2025-10-11T12:09:27 IST" duration-ms="1169" status="PASS">
-=======
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T16:03:38 IST" name="configBM" finished-at="2025-10-10T16:03:39 IST" duration-ms="1388" status="PASS">
->>>>>>> refs/remotes/Upstream/master
+        <test-method is-config="true" signature="configBeforeMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@1fa121e2]" started-at="2025-10-11T16:26:38 IST" name="configBeforeMethod" finished-at="2025-10-11T16:26:39 IST" duration-ms="440" status="PASS">
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- loginAsAdmin -->
-        <test-method signature="loginAsAdminWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:27 IST" name="loginAsAdminWithWrongPswd" finished-at="2025-10-11T12:09:30 IST" duration-ms="2682" status="PASS">
-=======
-        </test-method> <!-- configBM -->
-        <test-method signature="SampleTest()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T16:03:39 IST" name="SampleTest" finished-at="2025-10-10T16:03:39 IST" duration-ms="28" status="PASS">
->>>>>>> refs/remotes/Upstream/master
+        </test-method> <!-- configBeforeMethod -->
+        <test-method signature="verifyPostOrderInAdminOrders()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@1fa121e2]" started-at="2025-10-11T16:26:39 IST" name="verifyPostOrderInAdminOrders" finished-at="2025-10-11T16:26:40 IST" duration-ms="1601" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <input id="btnSubmit" type="submit" value="Post Order" class="submit_button"> is not clickable at point (271, 517). Other element would receive the click: <div style="width: 100%;position: fixed;bottom:0px;left:0px;padding-top:10px;background-color:rgb(236, 249, 255,0.9);display:flex;justify-content:center">...</div>
+  (Session info: chrome=141.0.7390.55)
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ed4276dc40480e946955a60dd16cbd66, clickElement {id=f.EEC89AD7C59BE19247B034D460C09309.d.4EEA2DF41F4AED37B9DF6DA6702B72E0.e.200}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.76 (d6fcfbb51aac..., userDataDir: C:\Users\Asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49575/devtoo..., se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ed4276dc40480e946955a60dd16cbd66)] -> id: btnSubmit]
+Session ID: ed4276dc40480e946955a60dd16cbd66]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input id="btnSubmit" type="submit" value="Post Order" class="submit_button"> is not clickable at point (271, 517). Other element would receive the click: <div style="width: 100%;position: fixed;bottom:0px;left:0px;padding-top:10px;background-color:rgb(236, 249, 255,0.9);display:flex;justify-content:center">...</div>
+  (Session info: chrome=141.0.7390.55)
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ed4276dc40480e946955a60dd16cbd66, clickElement {id=f.EEC89AD7C59BE19247B034D460C09309.d.4EEA2DF41F4AED37B9DF6DA6702B72E0.e.200}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.76 (d6fcfbb51aac..., userDataDir: C:\Users\Asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49575/devtoo..., se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ed4276dc40480e946955a60dd16cbd66)] -> id: btnSubmit]
+Session ID: ed4276dc40480e946955a60dd16cbd66
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+at com.client.Sales_Inventory.ObjectRepository.orderItemsPage.postOrder(orderItemsPage.java:40)
+at com.client.SalesInventory.Retailer.RetailerProfile.verifyPostOrderInAdminOrders(RetailerProfile.java:17)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- loginAsAdminWithWrongPswd -->
-        <test-method signature="loginAsRetailer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:30 IST" name="loginAsRetailer" finished-at="2025-10-11T12:09:31 IST" duration-ms="1158" status="PASS">
-=======
-        </test-method> <!-- SampleTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T16:03:39 IST" name="configAM" finished-at="2025-10-10T16:03:40 IST" duration-ms="307" status="PASS">
->>>>>>> refs/remotes/Upstream/master
+        </test-method> <!-- verifyPostOrderInAdminOrders -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@1fa121e2]" started-at="2025-10-11T16:26:40 IST" name="configAfterMethod" finished-at="2025-10-11T16:26:40 IST" duration-ms="155" status="PASS">
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- loginAsRetailer -->
-        <test-method signature="loginAsRetailerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:31 IST" name="loginAsRetailerWithWrongPswd" finished-at="2025-10-11T12:09:34 IST" duration-ms="2603" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAsRetailerWithWrongPswd -->
-        <test-method signature="loginToManufacturer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:34 IST" name="loginToManufacturer" finished-at="2025-10-11T12:09:35 IST" duration-ms="1155" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginToManufacturer -->
-        <test-method signature="loginToManufacturerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:35 IST" name="loginToManufacturerWithWrongPswd" finished-at="2025-10-11T12:09:38 IST" duration-ms="2854" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginToManufacturerWithWrongPswd -->
-        <test-method is-config="true" signature="afterClassConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:38 IST" name="afterClassConfigMethod" finished-at="2025-10-11T12:09:38 IST" duration-ms="461" status="PASS">
-=======
-        </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="afterClassConfigMethod()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T16:03:40 IST" name="afterClassConfigMethod" finished-at="2025-10-10T16:03:40 IST" duration-ms="386" status="PASS">
->>>>>>> refs/remotes/Upstream/master
+        </test-method> <!-- configAfterMethod -->
+        <test-method is-config="true" signature="afterClassConfigMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@1fa121e2]" started-at="2025-10-11T16:26:40 IST" name="afterClassConfigMethod" finished-at="2025-10-11T16:26:41 IST" duration-ms="308" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClassConfigMethod -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="afterSuiteConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:38 IST" name="afterSuiteConfigMethod" finished-at="2025-10-11T12:09:38 IST" duration-ms="2" status="PASS">
-=======
-        <test-method is-config="true" signature="afterSuiteConfigMethod()[pri:0, instance:com.client.SalesInventory.Module.SamplAdminTest@1165b38]" started-at="2025-10-10T16:03:40 IST" name="afterSuiteConfigMethod" finished-at="2025-10-10T16:03:40 IST" duration-ms="1" status="PASS">
->>>>>>> refs/remotes/Upstream/master
+        <test-method is-config="true" signature="afterSuiteConfigMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@1fa121e2]" started-at="2025-10-11T16:26:41 IST" name="afterSuiteConfigMethod" finished-at="2025-10-11T16:26:41 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuiteConfigMethod -->
-<<<<<<< HEAD
-      </class> <!-- com.client.SalesInventory.Login.LoginToApp -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
-=======
-      </class> <!-- com.client.SalesInventory.Module.SamplAdminTest -->
->>>>>>> branch 'master' of https://github.com/gitHaq2531/sales_Inventory.git
+      </class> <!-- com.client.SalesInventory.Retailer.RetailerProfile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
->>>>>>> refs/remotes/Upstream/master
 </testng-results>

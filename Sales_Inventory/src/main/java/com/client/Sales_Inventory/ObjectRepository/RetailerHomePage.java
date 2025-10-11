@@ -36,6 +36,13 @@ public class RetailerHomePage {
 	
 	@FindBy (xpath="//td//section[contains(.,'Welcome')]")
 	private WebElement retailerWelcomeMsg;
+	
+	@FindBy (xpath="//tr//td//a[text()='Details']")
+	private WebElement details1;
+
+	public WebElement getDetails1() {
+		return details1;
+	}
 
 	public WebElement getRetailerWelcomeMsg() {
 		return retailerWelcomeMsg;
