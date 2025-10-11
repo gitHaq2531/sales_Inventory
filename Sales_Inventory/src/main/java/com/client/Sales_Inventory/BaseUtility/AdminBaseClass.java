@@ -9,14 +9,14 @@ import com.client.Sales_Inventory.ObjectRepository.LoginPage;
 
 public class AdminBaseClass extends SuperBaseClass{
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void configBM() {
 		System.out.println("Login to application as Admin");
 		LoginPage lp=new LoginPage(driver);
 		lp.loginAsAdmin();
 		
 	}
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void configAM() {
 		System.out.println("Logout from application");
 		AdminHomePage ah=new AdminHomePage(driver);

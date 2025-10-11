@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.Random;
 
 public class JavaUtility {
+
 	public int getRandomNumber() {
 		Random rm=new Random();
 		int rnNo=rm.nextInt(5000);

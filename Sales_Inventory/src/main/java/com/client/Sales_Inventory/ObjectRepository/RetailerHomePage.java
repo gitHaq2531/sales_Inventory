@@ -33,6 +33,13 @@ public class RetailerHomePage {
 	
 	@FindBy (linkText = "My Invoices")
 	private WebElement myInvoicesLink;
+	
+	@FindBy (xpath="//td//section[contains(.,'Welcome')]")
+	private WebElement retailerWelcomeMsg;
+
+	public WebElement getRetailerWelcomeMsg() {
+		return retailerWelcomeMsg;
+	}
 
 	public WebDriver getDriver() {
 		return driver;

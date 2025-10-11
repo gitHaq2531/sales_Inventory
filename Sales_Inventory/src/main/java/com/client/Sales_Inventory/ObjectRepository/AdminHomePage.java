@@ -29,7 +29,13 @@ public class AdminHomePage {
 	@FindBy(linkText = "Products")
 	private WebElement productList;
 	
+	@FindBy(xpath="//td//h1")
+	private WebElement welcomeMsgText;
 	
+	
+	public WebElement getWelcomeMsgText() {
+		return welcomeMsgText;
+	}
 	public WebElement getLogout() {
 		return logout;
 	}

@@ -29,7 +29,12 @@ public class LoginPage {
 	@FindBy(xpath="//input[@type='submit']")
 	private WebElement loginbtn;
 
-
+	@FindBy(xpath="//span[@class='error_message']")
+	private WebElement errorMsg;
+	
+	public WebElement getErrorMsg() {
+		return errorMsg;
+	}
 	public WebElement getLoginTypeDD() {
 		return loginTypeDD;
 	}
