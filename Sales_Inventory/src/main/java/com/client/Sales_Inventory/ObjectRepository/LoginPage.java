@@ -26,15 +26,13 @@ public class LoginPage {
 	@FindBy(id="login:type")
 	private WebElement loginTypeDD;
 	
+	@FindBy(xpath="//input[@type='submit']")
+	private WebElement loginbtn;
+
+
 	public WebElement getLoginTypeDD() {
 		return loginTypeDD;
 	}
-
-	@FindBy(xpath="//div[@class='input-box']/descendant::option")
-	private WebElement loginTypeOptions;
-	
-	@FindBy(xpath="//input[@type='submit']")
-	private WebElement loginbtn;
 
 	public WebElement getUsernameEdt() {
 		return usernameEdt;
@@ -45,18 +43,30 @@ public class LoginPage {
 	public WebElement getLoginbtn() {
 		return loginbtn;
 	}
-	public void loginAsAdmin(String username,String password) {
 
+	public void loginAsAdmin() {
+		FileUtility flu=new FileUtility();
+		String AdminUn = flu.getDataFromPropertyFile("adminUn");
+		String AdminPw = flu.getDataFromPropertyFile("adminPw");
+		usernameEdt.sendKeys(AdminUn);
+		passwordEdt.sendKeys(AdminPw);
+		wb.selectByVisibleText(loginTypeDD, "Admin");
+		loginbtn.click();
+	}
+	
+public void loginAsAdmin(String username,String password) {
+		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.selectByVisibleText(loginTypeOptions,"Admin");
-	    loginbtn.click();			
-	}	
+		wb.selectByVisibleText(loginTypeDD,"Admin");
+		loginbtn.click();		
+	}
+	
 	public void loginAsRetailer(String username,String password) {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.selectByVisibleText(loginTypeOptions,"Retailer");
+		wb.selectByVisibleText(loginTypeDD,"Retailer");
 		loginbtn.click();		
 	}
 	
@@ -64,7 +74,7 @@ public class LoginPage {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.selectByVisibleText(loginTypeOptions, "Manufacturer");
+		wb.selectByVisibleText(loginTypeDD, "Manufacturer");
 		loginbtn.click();
 	}
 	
