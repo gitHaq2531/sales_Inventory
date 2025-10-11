@@ -3,25 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.client.SalesInventory.Module.SamplAdminTest">
+      <class name="packagetest.A">
         <methods>
-<<<<<<< HEAD
-          <include name="SampleTest"/>
           <include name="beforeClassConfigMethod"/>
           <include name="beforeSuitConfigMethod"/>
-          <include name="configBM"/>
-          <include name="configAM"/>
-=======
-          <include name="beforeClassConfigMethod"/>
-          <include name="beforeSuitConfigMethod"/>
-          <include name="test"/>
-          <include name="configBeforeMethod"/>
-          <include name="configAfterMethod"/>
->>>>>>> branch 'master' of https://github.com/gitHaq2531/sales_Inventory.git
+          <include name="m1"/>
           <include name="afterClassConfigMethod"/>
+          <include name="loginAsManufacturer"/>
+          <include name="logoutAsManufacturer"/>
           <include name="afterSuiteConfigMethod"/>
         </methods>
-      </class> <!-- com.client.SalesInventory.Module.SamplAdminTest -->
+      </class> <!-- packagetest.A -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
