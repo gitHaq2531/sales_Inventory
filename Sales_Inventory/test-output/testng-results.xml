@@ -2,67 +2,67 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-11T11:43:48 IST" name="Default suite" finished-at="2025-10-11T11:44:02 IST" duration-ms="13605">
+  <suite started-at="2025-10-11T12:09:24 IST" name="Suite" finished-at="2025-10-11T12:09:38 IST" duration-ms="14209">
     <groups>
       <group name="smoke">
-        <method signature="LoginToApp.loginAsAdmin()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" name="loginAsAdmin" class="com.client.SalesInventory.Login.LoginToApp"/>
-        <method signature="LoginToApp.loginAsAdminWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" name="loginAsAdminWithWrongPswd" class="com.client.SalesInventory.Login.LoginToApp"/>
-        <method signature="LoginToApp.loginAsRetailer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" name="loginAsRetailer" class="com.client.SalesInventory.Login.LoginToApp"/>
-        <method signature="LoginToApp.loginAsRetailerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" name="loginAsRetailerWithWrongPswd" class="com.client.SalesInventory.Login.LoginToApp"/>
-        <method signature="LoginToApp.loginToManufacturer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" name="loginToManufacturer" class="com.client.SalesInventory.Login.LoginToApp"/>
-        <method signature="LoginToApp.loginToManufacturerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" name="loginToManufacturerWithWrongPswd" class="com.client.SalesInventory.Login.LoginToApp"/>
+        <method signature="LoginToApp.loginAsAdmin()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginAsAdmin" class="com.client.SalesInventory.Login.LoginToApp"/>
+        <method signature="LoginToApp.loginAsAdminWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginAsAdminWithWrongPswd" class="com.client.SalesInventory.Login.LoginToApp"/>
+        <method signature="LoginToApp.loginAsRetailer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginAsRetailer" class="com.client.SalesInventory.Login.LoginToApp"/>
+        <method signature="LoginToApp.loginAsRetailerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginAsRetailerWithWrongPswd" class="com.client.SalesInventory.Login.LoginToApp"/>
+        <method signature="LoginToApp.loginToManufacturer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginToManufacturer" class="com.client.SalesInventory.Login.LoginToApp"/>
+        <method signature="LoginToApp.loginToManufacturerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" name="loginToManufacturerWithWrongPswd" class="com.client.SalesInventory.Login.LoginToApp"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-10-11T11:43:48 IST" name="Default test" finished-at="2025-10-11T11:44:02 IST" duration-ms="13605">
+    <test started-at="2025-10-11T12:09:24 IST" name="Test" finished-at="2025-10-11T12:09:38 IST" duration-ms="14209">
       <class name="com.client.SalesInventory.Login.LoginToApp">
-        <test-method is-config="true" signature="beforeSuitConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" started-at="2025-10-11T11:43:48 IST" name="beforeSuitConfigMethod" finished-at="2025-10-11T11:43:48 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="beforeSuitConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:24 IST" name="beforeSuitConfigMethod" finished-at="2025-10-11T12:09:24 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuitConfigMethod -->
-        <test-method is-config="true" signature="beforeClassConfigMethod(org.testng.xml.XmlTest)[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" started-at="2025-10-11T11:43:48 IST" name="beforeClassConfigMethod" finished-at="2025-10-11T11:43:50 IST" duration-ms="2125" status="PASS">
+        <test-method is-config="true" signature="beforeClassConfigMethod(org.testng.xml.XmlTest)[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:24 IST" name="beforeClassConfigMethod" finished-at="2025-10-11T12:09:26 IST" duration-ms="2043" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@6cb98c68]]>
+                <![CDATA[org.testng.xml.XmlTest@e9427e84]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClassConfigMethod -->
-        <test-method signature="loginAsAdmin()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" started-at="2025-10-11T11:43:50 IST" name="loginAsAdmin" finished-at="2025-10-11T11:43:52 IST" duration-ms="1275" status="PASS">
+        <test-method signature="loginAsAdmin()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:26 IST" name="loginAsAdmin" finished-at="2025-10-11T12:09:27 IST" duration-ms="1169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsAdmin -->
-        <test-method signature="loginAsAdminWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" started-at="2025-10-11T11:43:52 IST" name="loginAsAdminWithWrongPswd" finished-at="2025-10-11T11:43:54 IST" duration-ms="2560" status="PASS">
+        <test-method signature="loginAsAdminWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:27 IST" name="loginAsAdminWithWrongPswd" finished-at="2025-10-11T12:09:30 IST" duration-ms="2682" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsAdminWithWrongPswd -->
-        <test-method signature="loginAsRetailer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" started-at="2025-10-11T11:43:54 IST" name="loginAsRetailer" finished-at="2025-10-11T11:43:55 IST" duration-ms="1047" status="PASS">
+        <test-method signature="loginAsRetailer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:30 IST" name="loginAsRetailer" finished-at="2025-10-11T12:09:31 IST" duration-ms="1158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsRetailer -->
-        <test-method signature="loginAsRetailerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" started-at="2025-10-11T11:43:55 IST" name="loginAsRetailerWithWrongPswd" finished-at="2025-10-11T11:43:58 IST" duration-ms="2633" status="PASS">
+        <test-method signature="loginAsRetailerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:31 IST" name="loginAsRetailerWithWrongPswd" finished-at="2025-10-11T12:09:34 IST" duration-ms="2603" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsRetailerWithWrongPswd -->
-        <test-method signature="loginToManufacturer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" started-at="2025-10-11T11:43:58 IST" name="loginToManufacturer" finished-at="2025-10-11T11:43:59 IST" duration-ms="896" status="PASS">
+        <test-method signature="loginToManufacturer()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:34 IST" name="loginToManufacturer" finished-at="2025-10-11T12:09:35 IST" duration-ms="1155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToManufacturer -->
-        <test-method signature="loginToManufacturerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" started-at="2025-10-11T11:43:59 IST" name="loginToManufacturerWithWrongPswd" finished-at="2025-10-11T11:44:01 IST" duration-ms="2598" status="PASS">
+        <test-method signature="loginToManufacturerWithWrongPswd()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:35 IST" name="loginToManufacturerWithWrongPswd" finished-at="2025-10-11T12:09:38 IST" duration-ms="2854" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToManufacturerWithWrongPswd -->
-        <test-method is-config="true" signature="afterClassConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" started-at="2025-10-11T11:44:01 IST" name="afterClassConfigMethod" finished-at="2025-10-11T11:44:02 IST" duration-ms="399" status="PASS">
+        <test-method is-config="true" signature="afterClassConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:38 IST" name="afterClassConfigMethod" finished-at="2025-10-11T12:09:38 IST" duration-ms="461" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClassConfigMethod -->
-        <test-method is-config="true" signature="afterSuiteConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@c730b35]" started-at="2025-10-11T11:44:02 IST" name="afterSuiteConfigMethod" finished-at="2025-10-11T11:44:02 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="afterSuiteConfigMethod()[pri:0, instance:com.client.SalesInventory.Login.LoginToApp@38425407]" started-at="2025-10-11T12:09:38 IST" name="afterSuiteConfigMethod" finished-at="2025-10-11T12:09:38 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuiteConfigMethod -->
       </class> <!-- com.client.SalesInventory.Login.LoginToApp -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
