@@ -35,7 +35,7 @@ public class LoginToApp extends SuperBaseClass{
 		String actualUsername=welcomeMsg.substring(8);
 		System.out.println(actualUsername);
 		Assert.assertEquals(actualUsername, username);
-		
+		System.out.println(actualUsername);
 		ahp.logOut();
 	}
 
