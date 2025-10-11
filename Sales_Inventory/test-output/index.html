@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Asus\AppData\Local\Temp\testng-eclipse--2022265694\testng-customsuite.xml</span>
+                    <span>C:\Users\Asus\AppData\Local\Temp\testng-eclipse-1051130651\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,12 +108,27 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.client.SalesInventory.Login.LoginToApp" class="method navigator-link" hash-for-method="loginAsAdminWithWrongPswd">loginAsAdminWithWrongPswd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.client.SalesInventory.Login.LoginToApp" class="method navigator-link" hash-for-method="loginAsRetailer">loginAsRetailer</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.client.SalesInventory.Login.LoginToApp" class="method navigator-link" hash-for-method="loginAsRetailerWithWrongPswd">loginAsRetailerWithWrongPswd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.client.SalesInventory.Login.LoginToApp" class="method navigator-link" hash-for-method="loginToManufacturer">loginToManufacturer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.client.SalesInventory.Login.LoginToApp" class="method navigator-link" hash-for-method="loginToManufacturerWithWrongPswd">loginToManufacturerWithWrongPswd</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -143,9 +158,23 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="loginAsAdminWithWrongPswd">
+                  </a> <!-- loginAsAdminWithWrongPswd -->
+                  <span class="method-name">loginAsAdminWithWrongPswd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="loginAsRetailer">
                   </a> <!-- loginAsRetailer -->
                   <span class="method-name">loginAsRetailer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginAsRetailerWithWrongPswd">
+                  </a> <!-- loginAsRetailerWithWrongPswd -->
+                  <span class="method-name">loginAsRetailerWithWrongPswd</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -155,12 +184,19 @@
                   <span class="method-name">loginToManufacturer</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginToManufacturerWithWrongPswd">
+                  </a> <!-- loginToManufacturerWithWrongPswd -->
+                  <span class="method-name">loginToManufacturerWithWrongPswd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Asus\AppData\Local\Temp\testng-eclipse--2022265694\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Asus\AppData\Local\Temp\testng-eclipse-1051130651\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -209,11 +245,23 @@
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
+                <span class="method-in-group-name">loginAsAdminWithWrongPswd</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">loginAsRetailer</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
+                <span class="method-in-group-name">loginAsRetailerWithWrongPswd</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">loginToManufacturer</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginToManufacturerWithWrongPswd</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -233,24 +281,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginToManufacturer')
+data.setCell(0, 1, 'loginAsRetailerWithWrongPswd')
 data.setCell(0, 2, 'com.client.SalesInventory.Login.LoginToApp')
-data.setCell(0, 3, 3147);
+data.setCell(0, 3, 2633);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginAsRetailer')
+data.setCell(1, 1, 'loginToManufacturerWithWrongPswd')
 data.setCell(1, 2, 'com.client.SalesInventory.Login.LoginToApp')
-data.setCell(1, 3, 3061);
+data.setCell(1, 3, 2598);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'loginAsAdmin')
+data.setCell(2, 1, 'loginAsAdminWithWrongPswd')
 data.setCell(2, 2, 'com.client.SalesInventory.Login.LoginToApp')
-data.setCell(2, 3, 1147);
+data.setCell(2, 3, 2560);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loginAsAdmin')
+data.setCell(3, 2, 'com.client.SalesInventory.Login.LoginToApp')
+data.setCell(3, 3, 1275);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'loginAsRetailer')
+data.setCell(4, 2, 'com.client.SalesInventory.Login.LoginToApp')
+data.setCell(4, 3, 1047);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'loginToManufacturer')
+data.setCell(5, 2, 'com.client.SalesInventory.Login.LoginToApp')
+data.setCell(5, 3, 896);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -282,28 +342,40 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">beforeClassConfigMethod(org.testng.xml.XmlTest@e8244aec)</span>
-                <span class="method-start">41 ms</span>
+                <span class="method-name">beforeClassConfigMethod(org.testng.xml.XmlTest@6cb98c68)</span>
+                <span class="method-start">38 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginAsAdmin</span>
-                <span class="method-start">2548 ms</span>
+                <span class="method-start">2177 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginAsAdminWithWrongPswd</span>
+                <span class="method-start">3464 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginAsRetailer</span>
-                <span class="method-start">3707 ms</span>
+                <span class="method-start">6027 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginAsRetailerWithWrongPswd</span>
+                <span class="method-start">7080 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginToManufacturer</span>
-                <span class="method-start">6771 ms</span>
+                <span class="method-start">9716 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginToManufacturerWithWrongPswd</span>
+                <span class="method-start">10617 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClassConfigMethod</span>
-                <span class="method-start">9921 ms</span>
+                <span class="method-start">13220 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuiteConfigMethod</span>
-                <span class="method-start">10528 ms</span>
+                <span class="method-start">13666 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

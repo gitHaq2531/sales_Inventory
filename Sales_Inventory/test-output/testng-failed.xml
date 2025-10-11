@@ -5,9 +5,9 @@
     <classes>
       <class name="com.client.SalesInventory.Login.LoginToApp">
         <methods>
+          <include name="loginAsRetailerWithWrongPswd"/>
           <include name="beforeSuitConfigMethod"/>
           <include name="beforeClassConfigMethod"/>
-          <include name="loginToManufacturer"/>
           <include name="afterClassConfigMethod"/>
           <include name="afterSuiteConfigMethod"/>
         </methods>

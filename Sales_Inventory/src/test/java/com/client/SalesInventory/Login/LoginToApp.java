@@ -94,7 +94,6 @@ public class LoginToApp extends SuperBaseClass{
 		LoginPage lp=new LoginPage(driver);
 		FileUtility fLib=new FileUtility();
 		WebDriverUtility wLib=new WebDriverUtility();
-		AdminHomePage ahp=new AdminHomePage(driver);
 		
 		String username=fLib.getDataFromPropertyFile("adminUn");
 		String password=fLib.getDataFromPropertyFile("wrongpw");
@@ -105,8 +104,11 @@ public class LoginToApp extends SuperBaseClass{
 		lp.getLoginbtn().click();
 		
 		String errorMsg=lp.getErrorMsg().getText();
-		
-		ahp.logOut();
+		boolean flag=false;
+		if(errorMsg.contains("incorrect")) {
+			flag=true;
+		}
+		Assert.assertEquals(flag, true);
 	}
 
 	@Test (groups="smoke")
@@ -114,48 +116,41 @@ public class LoginToApp extends SuperBaseClass{
 		LoginPage lp=new LoginPage(driver);
 		FileUtility fLib=new FileUtility();
 		WebDriverUtility wLib=new WebDriverUtility();
-		RetailerHomePage rhp=new RetailerHomePage(driver);
 		
 		String username=fLib.getDataFromPropertyFile("retailerUn");
-		String password=fLib.getDataFromPropertyFile("retailerPw");
+		String password=fLib.getDataFromPropertyFile("wrongpw");
 		
 		lp.getUsernameEdt().sendKeys(username);
 		lp.getPasswordEdt().sendKeys(password);
 		wLib.selectByVisibleText(lp.getLoginTypeDD(), "Retailer");
 		lp.getLoginbtn().click();
 		
+		String errorMsg=lp.getErrorMsg().getText();
 		boolean flag=false;
-		String welcomeMsg=rhp.getRetailerWelcomeMsg().getText();
-		if(welcomeMsg.contains("Welcome "+username))
-		{
+		if(errorMsg.contains("incorrect")) {
 			flag=true;
 		}
 		Assert.assertEquals(flag, true);
-		
-		rhp.logOut();
 	}
 	@Test (groups="smoke")
 	public void loginToManufacturerWithWrongPswd() {
 		LoginPage lp=new LoginPage(driver);
 		FileUtility fLib=new FileUtility();
 		WebDriverUtility wLib=new WebDriverUtility();
-		ManufacturerHomePage mhp=new ManufacturerHomePage(driver);
 		
 		String username=fLib.getDataFromPropertyFile("manufacturerUn");
-		String password=fLib.getDataFromPropertyFile("manufacturerPw");
+		String password=fLib.getDataFromPropertyFile("wrongpw");
 		
 		lp.getUsernameEdt().sendKeys(username);
 		lp.getPasswordEdt().sendKeys(password);
 		wLib.selectByVisibleText(lp.getLoginTypeDD(), "Manufacturer");
 		lp.getLoginbtn().click();
 		
-		String welcomeMsg=mhp.getManufactrerWelcomeMsg().getText();
+		String errorMsg=lp.getErrorMsg().getText();
 		boolean flag=false;
-		if (welcomeMsg.contains("Welcome "+username)){
+		if(errorMsg.contains("incorrect")) {
 			flag=true;
 		}
 		Assert.assertEquals(flag, true);
-		
-		mhp.getLogoutBtn().click();
 	}
 }
