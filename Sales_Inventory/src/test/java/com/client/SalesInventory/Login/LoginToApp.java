@@ -89,7 +89,7 @@ public class LoginToApp extends SuperBaseClass{
 		mhp.getLogoutBtn().click();
 	}
 	
-	@Test(groups="smoke")
+	@Test(groups="regression")
 	public void loginAsAdminWithWrongPswd() {
 		LoginPage lp=new LoginPage(driver);
 		FileUtility fLib=new FileUtility();
@@ -111,7 +111,7 @@ public class LoginToApp extends SuperBaseClass{
 		Assert.assertEquals(flag, true);
 	}
 
-	@Test (groups="smoke")
+	@Test (groups="regression")
 	public void loginAsRetailerWithWrongPswd() {
 		LoginPage lp=new LoginPage(driver);
 		FileUtility fLib=new FileUtility();
@@ -132,7 +132,7 @@ public class LoginToApp extends SuperBaseClass{
 		}
 		Assert.assertEquals(flag, true);
 	}
-	@Test (groups="smoke")
+	@Test (groups="regression")
 	public void loginToManufacturerWithWrongPswd() {
 		LoginPage lp=new LoginPage(driver);
 		FileUtility fLib=new FileUtility();
