@@ -1,4 +1,4 @@
-package com.client.SalesInventory.Addproduct;
+ package com.client.SalesInventory.Addproduct;
 
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
