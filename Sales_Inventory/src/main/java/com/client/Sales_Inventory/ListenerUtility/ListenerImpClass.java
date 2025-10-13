@@ -63,7 +63,7 @@ public class ListenerImpClass implements ISuiteListener, ITestListener {
 		String testName=result.getMethod().getMethodName();
 		test.log(Status.FAIL, testName+" Execution Failed");
 		
-		/* Screenshot of failed testcase */
+		/* Screenshot of failed test case */
 		TakesScreenshot ts=(TakesScreenshot)UtilityClassObject.getDriver();
 		String filePath=ts.getScreenshotAs(OutputType.BASE64);
 		test.addScreenCaptureFromBase64String(filePath);
