@@ -1,13 +1,17 @@
 package com.client.Sales_Inventory.ObjectRepository;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.client.Sales_InventoryGenericUtility.JavaUtility;
+
 public class RetailerHomePage {
 	
 	public WebDriver driver;
+	JavaUtility jLib=new JavaUtility();
 	
 	public RetailerHomePage(WebDriver driver) {
 		this.driver=driver;
@@ -29,7 +33,7 @@ public class RetailerHomePage {
 	private WebElement productsLink;
 	
 	@FindBy (linkText = "My Orders")
-	private WebElement myOrderesLink;
+	private WebElement myOrdersLink;
 	
 	@FindBy (linkText = "My Invoices")
 	private WebElement myInvoicesLink;
@@ -72,8 +76,8 @@ public class RetailerHomePage {
 		return productsLink;
 	}
 
-	public WebElement getMyOrderesLink() {
-		return myOrderesLink;
+	public WebElement getMyOrdersLink() {
+		return myOrdersLink;
 	}
 
 	public WebElement getMyInvoicesLink() {
@@ -83,5 +87,9 @@ public class RetailerHomePage {
 	public void logOut() {
 		logOutBtn.click();
 	}
-
+	public void getDetailsOfRecentOrder() {
+		String todaysDate=jLib.getSystemDateDDMMYYYY();
+		System.out.println(todaysDate);
+		driver.findElement(By.xpath("//td[contains(text(),'"+todaysDate+"')]/parent::tr//a[text()='Details']")).click();
+	}
 }

@@ -6,8 +6,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.testng.annotations.Test;
 
 import com.client.Sales_Inventory.BaseUtility.ManufacturerBaseClass;
-
-import genericUtility.ExcelUtility;
+import com.client.Sales_InventoryGenericUtility.ExcelUtility;
 
 public class A extends ManufacturerBaseClass {
 	@Test
