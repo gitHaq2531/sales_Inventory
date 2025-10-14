@@ -1,21 +1,17 @@
 package com.client.SalesInventory.Addproduct;
 
 import static org.testng.Assert.assertEquals;
-
 import java.io.IOException;
 import java.util.List;
-
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.Status;
 import com.client.Sales_Inventory.BaseUtility.AdminBaseClass;
 import com.client.Sales_Inventory.BaseUtility.UtilityClassObject;
 import com.client.Sales_Inventory.ObjectRepository.AddProductPage;
 import com.client.Sales_Inventory.ObjectRepository.AdminHomePage;
-
 import genericUtility.ExcelUtility;
 import genericUtility.WebDriverUtility;
 @Listeners(com.client.Sales_Inventory.ListenerUtility.ListenerImpClass.class)
@@ -131,6 +127,48 @@ public class AddProductTest extends AdminBaseClass{
 			}					
 		}
 		assertEquals(flag, true);
-		System.out.println("Product added successfully"+product4);
+		System.out.println("Product added successfully"+product4);	
 	}
+	
+	@Test(groups="system")
+	public void checkDeletedProduct() throws EncryptedDocumentException, IOException {
+			UtilityClassObject.getTest().log(Status.INFO, "Read the data from excel");
+			String product5 = ex.getDataFromExcel("productInfo", 5, 0);
+			String price5 = ex.getDataFromExcel("productInfo", 5, 1);
+			String desc5 = ex.getDataFromExcel("productInfo", 5, 2);
+			
+			AdminHomePage ahp=new AdminHomePage(driver);
+			ahp.getAddProduct().click();
+			
+			AddProductPage app=new AddProductPage(driver);
+			app.getProductName().sendKeys(product5);
+			app.getPrice().sendKeys(price5);
+			app.selectUnit("No");
+			app.selectCategory("Add On Items");
+			
+			app.selectEnable();
+			app.getDescription().sendKeys(desc5);
+			app.clickAddproduct();
+			wb.handleAlert(driver);	
+			
+			app.getProductColoumn().click();
+			boolean flag=false;
+			List<WebElement> Data = app.getProductList();
+			for(WebElement PList:Data) {
+				String PrdtList = PList.getText();	
+				if(PrdtList.contains(product5)) {
+					flag=true;
+					break;
+				}					
+			}
+			assertEquals(flag, true);
+			System.out.println("Product added successfully"+product5);	
+			AddProductPage app1=new AddProductPage(driver);
+			app1.getProductColoumn().click();
+			
+			
+		}
+		
+		
+	
 }
