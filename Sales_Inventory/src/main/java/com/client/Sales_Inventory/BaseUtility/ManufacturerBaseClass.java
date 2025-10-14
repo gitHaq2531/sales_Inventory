@@ -13,7 +13,7 @@ import com.client.Sales_Inventory.ObjectRepository.LoginPage;
 public class ManufacturerBaseClass extends SuperBaseClass {
 
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void loginAsManufacturer() {
 		LoginPage lp = new LoginPage(driver);
 		WebElement username = lp.getUsernameEdt();
@@ -25,7 +25,7 @@ public class ManufacturerBaseClass extends SuperBaseClass {
 		loginBtn.click();
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void logoutAsManufacturer() {
 		AdminHomePage hp = new AdminHomePage(driver);
 		WebElement logoutBtn = hp.getLogout();
