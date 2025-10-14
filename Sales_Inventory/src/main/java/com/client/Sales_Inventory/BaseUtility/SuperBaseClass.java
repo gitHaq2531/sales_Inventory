@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.xml.XmlTest;
 
-import genericUtility.FileUtility;
+import com.client.Sales_InventoryGenericUtility.FileUtility;
 
 public class SuperBaseClass
 {

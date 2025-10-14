@@ -9,9 +9,8 @@ import com.client.Sales_Inventory.ObjectRepository.AdminHomePage;
 import com.client.Sales_Inventory.ObjectRepository.LoginPage;
 import com.client.Sales_Inventory.ObjectRepository.ManufacturerHomePage;
 import com.client.Sales_Inventory.ObjectRepository.RetailerHomePage;
-
-import genericUtility.FileUtility;
-import genericUtility.WebDriverUtility;
+import com.client.Sales_InventoryGenericUtility.FileUtility;
+import com.client.Sales_InventoryGenericUtility.WebDriverUtility;
 
 @Listeners(com.client.Sales_Inventory.ListenerUtility.ListenerImpClass.class)
 public class LoginToApp extends SuperBaseClass{
@@ -28,7 +27,7 @@ public class LoginToApp extends SuperBaseClass{
 		
 		lp.getUsernameEdt().sendKeys(username);
 		lp.getPasswordEdt().sendKeys(password);
-		wLib.selectByVisibleText(lp.getLoginTypeDD(), "Admin");
+		wLib.select(lp.getLoginTypeDD(), "Admin");
 		lp.getLoginbtn().click();
 		
 		String welcomeMsg=ahp.getWelcomeMsgText().getText();
@@ -51,7 +50,7 @@ public class LoginToApp extends SuperBaseClass{
 		
 		lp.getUsernameEdt().sendKeys(username);
 		lp.getPasswordEdt().sendKeys(password);
-		wLib.selectByVisibleText(lp.getLoginTypeDD(), "Retailer");
+		wLib.select(lp.getLoginTypeDD(), "Retailer");
 		lp.getLoginbtn().click();
 		
 		boolean flag=false;
@@ -76,7 +75,7 @@ public class LoginToApp extends SuperBaseClass{
 		
 		lp.getUsernameEdt().sendKeys(username);
 		lp.getPasswordEdt().sendKeys(password);
-		wLib.selectByVisibleText(lp.getLoginTypeDD(), "Manufacturer");
+		wLib.select(lp.getLoginTypeDD(), "Manufacturer");
 		lp.getLoginbtn().click();
 		
 		String welcomeMsg=mhp.getManufactrerWelcomeMsg().getText();
@@ -100,7 +99,7 @@ public class LoginToApp extends SuperBaseClass{
 		
 		lp.getUsernameEdt().sendKeys(username);
 		lp.getPasswordEdt().sendKeys(password);
-		wLib.selectByVisibleText(lp.getLoginTypeDD(), "Admin");
+		wLib.select(lp.getLoginTypeDD(), "Admin");
 		lp.getLoginbtn().click();
 		
 		String errorMsg=lp.getErrorMsg().getText();
@@ -122,7 +121,7 @@ public class LoginToApp extends SuperBaseClass{
 		
 		lp.getUsernameEdt().sendKeys(username);
 		lp.getPasswordEdt().sendKeys(password);
-		wLib.selectByVisibleText(lp.getLoginTypeDD(), "Retailer");
+		wLib.select(lp.getLoginTypeDD(), "Retailer");
 		lp.getLoginbtn().click();
 		
 		String errorMsg=lp.getErrorMsg().getText();
@@ -143,7 +142,7 @@ public class LoginToApp extends SuperBaseClass{
 		
 		lp.getUsernameEdt().sendKeys(username);
 		lp.getPasswordEdt().sendKeys(password);
-		wLib.selectByVisibleText(lp.getLoginTypeDD(), "Manufacturer");
+		wLib.select(lp.getLoginTypeDD(), "Manufacturer");
 		lp.getLoginbtn().click();
 		
 		String errorMsg=lp.getErrorMsg().getText();

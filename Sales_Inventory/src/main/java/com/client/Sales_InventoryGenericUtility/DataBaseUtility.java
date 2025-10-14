@@ -1,4 +1,4 @@
-package genericUtility;
+package com.client.Sales_InventoryGenericUtility;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

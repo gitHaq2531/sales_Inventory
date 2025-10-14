@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import genericUtility.WebDriverUtility;
+import com.client.Sales_InventoryGenericUtility.WebDriverUtility;
 
 public class AddProductPage {
 	WebDriverUtility wb=new WebDriverUtility();
@@ -69,11 +69,11 @@ public class AddProductPage {
 	}
 	
 	public void selectUnit(String unit) {
-		wb.selectByVisibleText(unitType, unit);
+		wb.select(unitType, unit);
 	}
 	
 	public void selectCategory(String category) {
-		wb.selectByVisibleText(Pcategory, category);
+		wb.select(Pcategory, category);
 	}
 	
 	public void clickAddproduct() {
