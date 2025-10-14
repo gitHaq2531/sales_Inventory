@@ -1,47 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-14T10:29:48 IST" name="Default suite" finished-at="2025-10-14T10:29:57 IST" duration-ms="8722">
+  <suite started-at="2025-10-14T18:03:50 IST" name="Default suite" finished-at="2025-10-14T18:03:59 IST" duration-ms="8887">
     <groups>
-      <group name="system">
-        <method signature="RetailerProfile.verifyPostOrderInAdminOrders()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@6ed3ccb2]" name="verifyPostOrderInAdminOrders" class="com.client.SalesInventory.Retailer.RetailerProfile"/>
-      </group> <!-- system -->
     </groups>
-    <test started-at="2025-10-14T10:29:48 IST" name="Default test" finished-at="2025-10-14T10:29:57 IST" duration-ms="8722">
+    <test started-at="2025-10-14T18:03:50 IST" name="Default test" finished-at="2025-10-14T18:03:59 IST" duration-ms="8887">
       <class name="com.client.SalesInventory.Retailer.RetailerProfile">
-        <test-method is-config="true" signature="beforeSuitConfigMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@6ed3ccb2]" started-at="2025-10-14T10:29:48 IST" name="beforeSuitConfigMethod" finished-at="2025-10-14T10:29:48 IST" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="beforeSuitConfigMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@489115ef]" started-at="2025-10-14T18:03:50 IST" name="beforeSuitConfigMethod" finished-at="2025-10-14T18:03:50 IST" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuitConfigMethod -->
-        <test-method is-config="true" signature="beforeClassConfigMethod(org.testng.xml.XmlTest)[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@6ed3ccb2]" started-at="2025-10-14T10:29:48 IST" name="beforeClassConfigMethod" finished-at="2025-10-14T10:29:51 IST" duration-ms="2886" status="PASS">
+        <test-method is-config="true" signature="beforeClassConfigMethod(org.testng.xml.XmlTest)[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@489115ef]" started-at="2025-10-14T18:03:50 IST" name="beforeClassConfigMethod" finished-at="2025-10-14T18:03:53 IST" duration-ms="2452" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@40d6e986]]>
+                <![CDATA[org.testng.xml.XmlTest@ed9d509e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClassConfigMethod -->
-        <test-method is-config="true" signature="configBeforeMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@6ed3ccb2]" started-at="2025-10-14T10:29:51 IST" name="configBeforeMethod" finished-at="2025-10-14T10:29:52 IST" duration-ms="1026" status="PASS">
+        <test-method is-config="true" signature="configBeforeMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@489115ef]" started-at="2025-10-14T18:03:53 IST" name="configBeforeMethod" finished-at="2025-10-14T18:03:53 IST" duration-ms="588" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBeforeMethod -->
-        <test-method signature="verifyPostOrderInAdminOrders()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@6ed3ccb2]" started-at="2025-10-14T10:29:52 IST" name="verifyPostOrderInAdminOrders" finished-at="2025-10-14T10:29:56 IST" duration-ms="3909" status="PASS">
+        <test-method signature="verifyTotalPriceInNewOrder()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@489115ef]" started-at="2025-10-14T18:03:53 IST" name="verifyTotalPriceInNewOrder" finished-at="2025-10-14T18:03:59 IST" duration-ms="5375" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyPostOrderInAdminOrders -->
-        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@6ed3ccb2]" started-at="2025-10-14T10:29:56 IST" name="configAfterMethod" finished-at="2025-10-14T10:29:56 IST" duration-ms="321" status="PASS">
+        </test-method> <!-- verifyTotalPriceInNewOrder -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@489115ef]" started-at="2025-10-14T18:03:59 IST" name="configAfterMethod" finished-at="2025-10-14T18:03:59 IST" duration-ms="144" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAfterMethod -->
-        <test-method is-config="true" signature="afterClassConfigMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@6ed3ccb2]" started-at="2025-10-14T10:29:56 IST" name="afterClassConfigMethod" finished-at="2025-10-14T10:29:57 IST" duration-ms="506" status="PASS">
+        <test-method is-config="true" signature="afterClassConfigMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@489115ef]" started-at="2025-10-14T18:03:59 IST" name="afterClassConfigMethod" finished-at="2025-10-14T18:03:59 IST" duration-ms="290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClassConfigMethod -->
-        <test-method is-config="true" signature="afterSuiteConfigMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@6ed3ccb2]" started-at="2025-10-14T10:29:57 IST" name="afterSuiteConfigMethod" finished-at="2025-10-14T10:29:57 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterSuiteConfigMethod()[pri:0, instance:com.client.SalesInventory.Retailer.RetailerProfile@489115ef]" started-at="2025-10-14T18:03:59 IST" name="afterSuiteConfigMethod" finished-at="2025-10-14T18:03:59 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuiteConfigMethod -->

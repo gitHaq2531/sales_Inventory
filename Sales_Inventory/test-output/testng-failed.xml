@@ -5,9 +5,9 @@
     <classes>
       <class name="com.client.SalesInventory.Retailer.RetailerProfile">
         <methods>
-          <include name="verifyPostOrderInAdminOrders"/>
           <include name="beforeSuitConfigMethod"/>
           <include name="beforeClassConfigMethod"/>
+          <include name="verifyTotalPriceInNewOrder"/>
           <include name="configBeforeMethod"/>
           <include name="configAfterMethod"/>
           <include name="afterClassConfigMethod"/>

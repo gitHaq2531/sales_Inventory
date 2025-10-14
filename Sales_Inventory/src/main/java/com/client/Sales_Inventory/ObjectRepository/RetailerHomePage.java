@@ -41,19 +41,20 @@ public class RetailerHomePage {
 	@FindBy (xpath="//td//section[contains(.,'Welcome')]")
 	private WebElement retailerWelcomeMsg;
 	
-	@FindBy (xpath="//tr//td//a[text()='Details']")
+	@FindBy (xpath="//a[text()='Details']")
 	private WebElement details1;
 
 	public WebElement getDetails1() {
+		try {
 		return details1;
+		}
+		catch (Exception e) {
+			return driver.findElement(By.xpath("//a[text()='Details']"));
+		}
 	}
 
 	public WebElement getRetailerWelcomeMsg() {
 		return retailerWelcomeMsg;
-	}
-
-	public WebDriver getDriver() {
-		return driver;
 	}
 
 	public WebElement getLogOutBtn() {
@@ -87,9 +88,5 @@ public class RetailerHomePage {
 	public void logOut() {
 		logOutBtn.click();
 	}
-	public void getDetailsOfRecentOrder() {
-		String todaysDate=jLib.getSystemDateDDMMYYYY();
-		System.out.println(todaysDate);
-		driver.findElement(By.xpath("//td[contains(text(),'"+todaysDate+"')]/parent::tr//a[text()='Details']")).click();
-	}
+
 }

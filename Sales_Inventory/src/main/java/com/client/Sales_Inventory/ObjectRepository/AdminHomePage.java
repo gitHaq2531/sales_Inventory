@@ -32,7 +32,12 @@ public class AdminHomePage {
 	@FindBy(xpath="//td//h1")
 	private WebElement welcomeMsgText;
 	
+	@FindBy(xpath="//a[text()='Orders']")
+	private WebElement ordersLink;
 	
+	public WebElement getOrdersLink() {
+		return ordersLink;
+	}
 	public WebElement getWelcomeMsgText() {
 		return welcomeMsgText;
 	}
@@ -53,10 +58,6 @@ public class AdminHomePage {
 	public WebElement getProductList() {
 		return productList;
 	}
-	
-	
-	
-	
 	
 	public void logOut() {
 		logout.click();
