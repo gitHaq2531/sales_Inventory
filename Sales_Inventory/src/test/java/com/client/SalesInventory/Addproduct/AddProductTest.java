@@ -1,4 +1,4 @@
-package com.client.SalesInventory.Addproduct;
+ package com.client.SalesInventory.Addproduct;
 
 import static org.testng.Assert.assertEquals;
 import java.io.IOException;
@@ -12,8 +12,9 @@ import com.client.Sales_Inventory.BaseUtility.AdminBaseClass;
 import com.client.Sales_Inventory.BaseUtility.UtilityClassObject;
 import com.client.Sales_Inventory.ObjectRepository.AddProductPage;
 import com.client.Sales_Inventory.ObjectRepository.AdminHomePage;
-import genericUtility.ExcelUtility;
-import genericUtility.WebDriverUtility;
+import com.client.Sales_InventoryGenericUtility.ExcelUtility;
+import com.client.Sales_InventoryGenericUtility.WebDriverUtility;
+
 @Listeners(com.client.Sales_Inventory.ListenerUtility.ListenerImpClass.class)
 public class AddProductTest extends AdminBaseClass{
 	ExcelUtility ex=new ExcelUtility();

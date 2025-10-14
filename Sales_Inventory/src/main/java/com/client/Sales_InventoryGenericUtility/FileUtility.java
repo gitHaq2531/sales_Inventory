@@ -1,4 +1,4 @@
-package genericUtility;
+package com.client.Sales_InventoryGenericUtility;
 
 import java.io.FileInputStream;
 import java.util.Properties;

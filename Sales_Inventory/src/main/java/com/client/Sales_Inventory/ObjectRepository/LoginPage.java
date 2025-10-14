@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import genericUtility.FileUtility;
-import genericUtility.WebDriverUtility;
+import com.client.Sales_InventoryGenericUtility.FileUtility;
+import com.client.Sales_InventoryGenericUtility.WebDriverUtility;
 
 public class LoginPage {
 	WebDriverUtility wb=new WebDriverUtility();
@@ -55,7 +55,7 @@ public class LoginPage {
 		String AdminPw = flu.getDataFromPropertyFile("adminPw");
 		usernameEdt.sendKeys(AdminUn);
 		passwordEdt.sendKeys(AdminPw);
-		wb.selectByVisibleText(loginTypeDD, "Admin");
+		wb.select(loginTypeDD, "Admin");
 		loginbtn.click();
 	}
 	
@@ -63,7 +63,7 @@ public void loginAsAdmin(String username,String password) {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.selectByVisibleText(loginTypeDD,"Admin");
+		wb.select(loginTypeDD,"Admin");
 		loginbtn.click();		
 	}
 	
@@ -71,7 +71,7 @@ public void loginAsAdmin(String username,String password) {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.selectByVisibleText(loginTypeDD,"Retailer");
+		wb.select(loginTypeDD,"Retailer");
 		loginbtn.click();		
 	}
 	
@@ -79,7 +79,7 @@ public void loginAsAdmin(String username,String password) {
 		
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wb.selectByVisibleText(loginTypeDD, "Manufacturer");
+		wb.select(loginTypeDD, "Manufacturer");
 		loginbtn.click();
 	}
 	
@@ -93,7 +93,7 @@ public void loginAsAdmin(String username,String password) {
 		String password=fLib.getDataFromPropertyFile("retailerPw");
 		usernameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
-		wLib.selectByVisibleText(loginTypeDD,"Retailer");
+		wLib.select(loginTypeDD,"Retailer");
 		getLoginbtn().click();
 	}
 

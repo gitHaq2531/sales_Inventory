@@ -1,4 +1,4 @@
-package genericUtility;
+package com.client.Sales_InventoryGenericUtility;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -26,6 +26,13 @@ public class JavaUtility {
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 		String data = sdf.format(dobj);
 		return data;
+	}
+	
+	public String getSystemDateDDMMYYYY() {
+		Date dobj=new Date();
+		SimpleDateFormat sdf=new SimpleDateFormat("dd-MM-yyyy");
+		String Date=sdf.format(dobj);
+		return Date;
 	}
 
 }
