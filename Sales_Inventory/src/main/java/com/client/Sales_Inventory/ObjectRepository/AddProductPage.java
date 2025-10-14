@@ -1,5 +1,7 @@
 package com.client.Sales_Inventory.ObjectRepository;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,7 +41,41 @@ public class AddProductPage {
 	@FindBy(xpath="//input[@value='Add Product']")
 	private WebElement add;
 	
+	@FindBy(xpath="//input[@value='Log out']")
+	private WebElement logout;
 	
+	@FindBy(xpath="//section/h1")
+	private WebElement PageName;
+	
+	
+	@FindBy(linkText = "Products")
+	private WebElement productColoumn;
+	
+	@FindBy(xpath="//table[@class='table_displayData']/tbody/tr/td[3]")
+	private List<WebElement> productList;
+	
+	
+	public List<WebElement> getProductList() {
+		return productList;
+	}
+	public WebElement getProductColoumn() {
+		return productColoumn;
+	}
+	public WebElement getPageName() {
+		return PageName;
+	}
+	public WebElement getLogout() {
+		return logout;
+	}
+	public WebElement getProductName() {
+		return productName;
+	}
+	public WebElement getPrice() {
+		return price;
+	}
+	public WebElement getDescription() {
+		return description;
+	}
 	public WebElement getUnitType() {
 		return unitType;
 	}
