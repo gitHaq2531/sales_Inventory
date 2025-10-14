@@ -2,6 +2,7 @@ package com.client.Sales_InventoryGenericUtility;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -34,11 +35,23 @@ public class WebDriverUtility {
 	
 	
 	
-	public void waitForPageLoad(WebDriver driver) {
+	
+	public void waitforpageload(WebDriver driver) {
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(15));
-		wait.until(ExpectedConditions.alertIsPresent());	
+		wait.until(ExpectedConditions.alertIsPresent());
+		
 	}
 	
-	
+	public void handleAlert(WebDriver driver) {
+		try {
+		waitforpageload(driver);
+		Alert alt=driver.switchTo().alert();
+		alt.accept();
+		System.out.println("Alert accepted successfully.");
+		}catch (Exception e) {
+			System.out.println("Alert accepted successfully.");
+			
+		}
+	}
 	
 }
