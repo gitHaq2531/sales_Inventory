@@ -31,6 +31,7 @@ public class AdminHomePage {
 	@FindBy(xpath="//td//h1")
 	private WebElement welcomeMsgText;
 	
+
 	@FindBy(xpath = "//a[text()='Add Manufacturer']")
 	private WebElement AddManufacturerlink;
 	
@@ -38,7 +39,14 @@ public class AdminHomePage {
 		return AddManufacturerlink;
 	}
 	
+
+	@FindBy(xpath="//a[text()='Orders']")
+	private WebElement ordersLink;
+
 	
+	public WebElement getOrdersLink() {
+		return ordersLink;
+	}
 	public WebElement getWelcomeMsgText() {
 		return welcomeMsgText;
 	}
@@ -59,7 +67,6 @@ public class AdminHomePage {
 	public WebElement getProductList() {
 		return productList;
 	}
-	
 	
 	public void logOut() {
 		logout.click();

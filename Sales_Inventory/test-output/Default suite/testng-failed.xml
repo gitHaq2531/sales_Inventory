@@ -5,10 +5,37 @@
     <classes>
       <class name="com.client.SalesInventory.verifyAddManufacturingFunc.Verify_AddManufacturingFunc">
         <methods>
-          <include name="beforeClassConfigMethod"/>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          <include name="verifyPostOrderInAdminOrders"/>
+>>>>>>> refs/remotes/upstream/master
+>>>>>>> refs/remotes/Upstream/master
           <include name="beforeSuitConfigMethod"/>
+>>>>>>> refs/remotes/origin/master
+          <include name="beforeClassConfigMethod"/>
+<<<<<<< HEAD
+          <include name="beforeSuitConfigMethod"/>
+=======
+<<<<<<< HEAD
+          <include name="verifyTotalPriceInNewOrder"/>
+=======
+<<<<<<< HEAD
+          <include name="checkAddedProduct"/>
+>>>>>>> refs/remotes/origin/master
           <include name="configBM"/>
           <include name="configAM"/>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> refs/remotes/Upstream/master
+          <include name="configBeforeMethod"/>
+          <include name="configAfterMethod"/>
+>>>>>>> refs/remotes/upstream/master
+>>>>>>> refs/remotes/origin/master
           <include name="afterClassConfigMethod"/>
           <include name="afterSuiteConfigMethod"/>
           <include name="verifyAddmanufacturing"/>
