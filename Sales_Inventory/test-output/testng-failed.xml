@@ -3,12 +3,10 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.client.SalesInventory.Addproduct.AddProductTest">
-=======
-      <class name="com.client.SalesInventory.Retailer.RetailerProfile">
->>>>>>> refs/remotes/upstream/master
+      <class name="com.client.SalesInventory.verifyAddManufacturingFunc.Verify_AddManufacturingFunc">
         <methods>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -17,27 +15,32 @@
 >>>>>>> refs/remotes/upstream/master
 >>>>>>> refs/remotes/Upstream/master
           <include name="beforeSuitConfigMethod"/>
+>>>>>>> refs/remotes/origin/master
           <include name="beforeClassConfigMethod"/>
+<<<<<<< HEAD
+          <include name="beforeSuitConfigMethod"/>
+=======
 <<<<<<< HEAD
           <include name="verifyTotalPriceInNewOrder"/>
 =======
 <<<<<<< HEAD
           <include name="checkAddedProduct"/>
+>>>>>>> refs/remotes/origin/master
           <include name="configBM"/>
           <include name="configAM"/>
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> refs/remotes/Upstream/master
           <include name="configBeforeMethod"/>
           <include name="configAfterMethod"/>
 >>>>>>> refs/remotes/upstream/master
+>>>>>>> refs/remotes/origin/master
           <include name="afterClassConfigMethod"/>
           <include name="afterSuiteConfigMethod"/>
+          <include name="verifyAddmanufacturing"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- com.client.SalesInventory.Addproduct.AddProductTest -->
-=======
-      </class> <!-- com.client.SalesInventory.Retailer.RetailerProfile -->
->>>>>>> refs/remotes/upstream/master
+      </class> <!-- com.client.SalesInventory.verifyAddManufacturingFunc.Verify_AddManufacturingFunc -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
