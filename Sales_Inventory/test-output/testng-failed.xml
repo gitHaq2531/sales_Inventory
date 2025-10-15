@@ -11,15 +11,22 @@
         <methods>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
           <include name="verifyPostOrderInAdminOrders"/>
 >>>>>>> refs/remotes/upstream/master
+>>>>>>> refs/remotes/Upstream/master
           <include name="beforeSuitConfigMethod"/>
           <include name="beforeClassConfigMethod"/>
+<<<<<<< HEAD
+          <include name="verifyTotalPriceInNewOrder"/>
+=======
 <<<<<<< HEAD
           <include name="checkAddedProduct"/>
           <include name="configBM"/>
           <include name="configAM"/>
 =======
+>>>>>>> refs/remotes/Upstream/master
           <include name="configBeforeMethod"/>
           <include name="configAfterMethod"/>
 >>>>>>> refs/remotes/upstream/master

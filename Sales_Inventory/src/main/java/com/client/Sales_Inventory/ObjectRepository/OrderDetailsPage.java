@@ -21,4 +21,5 @@ public class OrderDetailsPage {
 		WebElement quantity=driver.findElement(By.xpath("//table[@class='table_invoiceFormat']//td[3]"));
 		return quantity;
 	}
+	
 }

@@ -1,17 +1,13 @@
 package com.client.Sales_Inventory.ObjectRepository;
 
-import java.io.IOException;
+import java.util.List;
 
-import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.client.Sales_InventoryGenericUtility.ExcelUtility;
 import com.client.Sales_InventoryGenericUtility.WebDriverUtility;
 
 public class OrderItemsPage {
@@ -32,6 +28,24 @@ public class OrderItemsPage {
 	@FindBy(id="btnSubmit")
 	private WebElement postOrderBtn;
 	
+	@FindBy(xpath="//input[@class='quantity']")
+	private List<WebElement> allQuantities;
+	
+	@FindBy(xpath="//table[@class='table_displayData']//td/parent::tr/td[1]")
+	private List<WebElement> allIds;
+	
+	@FindBy(id="txtFinalAmount")
+	private WebElement totalPrice;
+	
+	public WebElement getTotalPrice() {
+		return totalPrice;
+	}
+	public List<WebElement> getAllIds() {
+		return allIds;
+	}
+	public List<WebElement> getAllQuantities() {
+		return allQuantities;
+	}
 	public WebElement getProdQnty7() {
 		return prodQnty7;
 	}
@@ -51,36 +65,14 @@ public class OrderItemsPage {
 		WebElement prod=driver.findElement(By.xpath("//input[@id='7']//parent::td//parent::tr//td[2]"));
 		return prod;
 	}
-	
-	public void postSingleOrder(String id,String quantity) {
-		RetailerHomePage rhp=new RetailerHomePage(driver);
-		rhp.getNewOrderLink().click();
-		WebElement prodQnty=driver.findElement(By.xpath("//input[@class='quantity' and @id="+id+"]"));
-		prodQnty.sendKeys(quantity);
-		wLib.scroll(driver, 0,300);
-		postOrderBtn.click();
+	public WebElement getPrice(String id) {
+//		String path="//div[@id='totalPrice"+id+"']";
+//		System.out.println(path);
+		WebElement price=driver.findElement(By.xpath("//div[@id='totalPrice"+id+"']"));
+		return price;
 	}
-	
-	public void postSingleProdOrder() throws EncryptedDocumentException, IOException {
-		RetailerHomePage rhp=new RetailerHomePage(driver);
-		rhp.getNewOrderLink().click();
-		ExcelUtility eLib=new ExcelUtility();
-		String prodID=eLib.getDataFromExcel("Prod", 7, 1);
-		String quantity=eLib.getDataFromExcel("Prod", 7, 2);
-		WebElement prodQnty=driver.findElement(By.xpath("//input[@class='quantity' and @id="+prodID+"]"));
-		prodQnty.sendKeys(quantity);
-		String product=getProduct(7).getText();
-		wLib.scroll(driver, postOrderBtn);
-		Actions act=new Actions(driver);
-		act.scrollToElement(postOrderBtn).scrollByAmount(0, 100).perform();
-		postOrderBtn.click();
+	public WebElement getPrice() {
+		WebElement price=driver.findElement(By.xpath("//div[@id='totalPrice7']"));
+		return price;
 	}
-	
-	public void postMultipleProdOrder() {
-		
-		RetailerHomePage rhp=new RetailerHomePage(driver);
-		rhp.getNewOrderLink().click();
-		ExcelUtility eLib=new ExcelUtility();
-	}
-
 }
