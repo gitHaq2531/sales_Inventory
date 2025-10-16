@@ -14,7 +14,6 @@ public class AdminHomePage {
 	@FindBy(xpath="//input[@class='submit_button']")
 	private WebElement logout;
 	
-	
 	@FindBy(linkText = "Add Products")
 	private WebElement addProduct;
 	
@@ -32,8 +31,18 @@ public class AdminHomePage {
 	@FindBy(xpath="//td//h1")
 	private WebElement welcomeMsgText;
 	
+
+	@FindBy(xpath = "//a[text()='Add Manufacturer']")
+	private WebElement AddManufacturerlink;
+	
+	public WebElement getAddManufacturerlink() {
+		return AddManufacturerlink;
+	}
+	
+
 	@FindBy(xpath="//a[text()='Orders']")
 	private WebElement ordersLink;
+
 	
 	@FindBy(linkText = "Manage Area")
 	private WebElement manageAreaLink;
