@@ -96,5 +96,15 @@ public void loginAsAdmin(String username,String password) {
 		wLib.select(loginTypeDD,"Retailer");
 		getLoginbtn().click();
 	}
+	public void loginAsManufacturerKhadi() {
+		FileUtility fLib=new FileUtility();
+		WebDriverUtility wLib=new WebDriverUtility();
+		String username=fLib.getDataFromPropertyFile("manufacturerUn");
+		String password=fLib.getDataFromPropertyFile("manufacturerPw");
+		usernameEdt.sendKeys(username);
+		passwordEdt.sendKeys(password);
+		wLib.select(loginTypeDD,"Manufacturer");
+		getLoginbtn().click();
+	}
 
 }
