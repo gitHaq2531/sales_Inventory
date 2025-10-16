@@ -11,7 +11,10 @@ import com.client.Sales_Inventory.ObjectRepository.ManufacturerHomePage;
 import com.client.Sales_Inventory.ObjectRepository.RetailerHomePage;
 import com.client.Sales_InventoryGenericUtility.FileUtility;
 import com.client.Sales_InventoryGenericUtility.WebDriverUtility;
-
+/**
+ * @author Harshali
+ * This class contains all the test scripts on Login module
+ */
 @Listeners(com.client.Sales_Inventory.ListenerUtility.ListenerImpClass.class)
 public class LoginToApp extends SuperBaseClass{
 	

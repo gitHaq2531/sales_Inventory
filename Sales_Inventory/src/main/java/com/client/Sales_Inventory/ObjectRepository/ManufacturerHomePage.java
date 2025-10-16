@@ -18,6 +18,13 @@ public class ManufacturerHomePage {
 	
 	@FindBy(className="submit_button")
 	private WebElement logoutBtn;
+	
+	@FindBy(linkText = "Orders")
+	private WebElement ordersLink;
+
+	public WebElement getOrdersLink() {
+		return ordersLink;
+	}
 
 	public WebElement getLogoutBtn() {
 		return logoutBtn;
