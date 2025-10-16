@@ -35,6 +35,12 @@ public class AdminHomePage {
 	@FindBy(xpath="//a[text()='Orders']")
 	private WebElement ordersLink;
 	
+	@FindBy(linkText = "Manage Area")
+	private WebElement manageAreaLink;
+	
+	public WebElement getManageAreaLink() {
+		return manageAreaLink;
+	}
 	public WebElement getOrdersLink() {
 		return ordersLink;
 	}

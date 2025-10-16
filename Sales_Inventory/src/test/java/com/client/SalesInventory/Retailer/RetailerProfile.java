@@ -1,13 +1,10 @@
 package com.client.SalesInventory.Retailer;
 
 import java.io.IOException;
-import java.time.Duration;
-import java.util.Iterator;
 import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -16,15 +13,20 @@ import org.testng.annotations.Test;
 import com.client.Sales_Inventory.BaseUtility.RetailerBaseClass;
 import com.client.Sales_Inventory.ObjectRepository.AdminHomePage;
 import com.client.Sales_Inventory.ObjectRepository.LoginPage;
+import com.client.Sales_Inventory.ObjectRepository.ManufacturerHomePage;
 import com.client.Sales_Inventory.ObjectRepository.MyOrdersPage;
 import com.client.Sales_Inventory.ObjectRepository.OrderDetailsPage;
 import com.client.Sales_Inventory.ObjectRepository.OrderItemsPage;
+import com.client.Sales_Inventory.ObjectRepository.OrdersInManufacturerPage;
 import com.client.Sales_Inventory.ObjectRepository.OrdersPageInAdmin;
 import com.client.Sales_Inventory.ObjectRepository.RetailerHomePage;
 import com.client.Sales_InventoryGenericUtility.ExcelUtility;
 import com.client.Sales_InventoryGenericUtility.JavaUtility;
 import com.client.Sales_InventoryGenericUtility.WebDriverUtility;
-
+/**
+ * @author Harshali
+ * This class contains all the test scripts related to Retailer module
+ */
 public class RetailerProfile extends RetailerBaseClass {
 	
 	@Test (groups="integration")
@@ -135,6 +137,8 @@ public class RetailerProfile extends RetailerBaseClass {
 			totalPrice=totalPrice+prodPrice;
 		}		
 		System.out.println(totalPrice);
+		
+// can be automated further when GUI of Total price will be changed by front end developer from input to div & we'll get text value.
 //		Actions act=new Actions(driver);
 //		act.scrollByAmount(0, 20).doubleClick(oip.getTotalPrice()).keyDown(Keys.CONTROL).sendKeys(Keys.chord("C")).release().pause(1000).perform();
 //		act.doubleClick(oip.getProdQnty7()).keyDown(Keys.CONTROL).sendKeys(Keys.chord("V")).release().perform();
@@ -144,5 +148,40 @@ public class RetailerProfile extends RetailerBaseClass {
 		//double actualTotalPrice=Double.parseDouble(actTotalPrice);
 	//	Assert.assertEquals(totalPrice, actualTotalPrice);
 		
+	}
+	@Test
+	public void verifyPostOrderInManufacturer () throws EncryptedDocumentException, IOException {
+		RetailerHomePage rhp=new RetailerHomePage(driver);
+		OrderItemsPage oip=new OrderItemsPage(driver);
+		LoginPage lp=new LoginPage(driver);
+		ManufacturerHomePage mhp=new ManufacturerHomePage(driver);
+		OrdersInManufacturerPage omp=new OrdersInManufacturerPage(driver);
+		OrderDetailsPage odp=new OrderDetailsPage(driver);
+		ExcelUtility eLib=new ExcelUtility();
+		WebDriverUtility wLib=new WebDriverUtility();
+		JavaUtility jLib=new JavaUtility();
+		rhp.getNewOrderLink().click();
+		
+		/*Post a new order*/
+		rhp.getNewOrderLink().click();
+		String prodID=eLib.getDataFromExcel("Prod", 7, 1);
+		String quantity=eLib.getDataFromExcel("Prod", 7, 2);
+		WebElement prodQnty=driver.findElement(By.xpath("//input[@class='quantity' and @id="+prodID+"]"));
+		prodQnty.sendKeys(quantity);
+		String product=oip.getProduct(7).getText();
+		wLib.scroll(driver, oip.getPostOrderBtn());
+		Actions act=new Actions(driver);
+		act.scrollToElement(oip.getPostOrderBtn()).scrollByAmount(0, 100).perform();
+		oip.getPostOrderBtn().click();
+		rhp.logOut();
+				
+		lp.loginAsManufacturerKhadi();
+		mhp.getOrdersLink().click();
+		wLib.select(omp.getSearchByDD(), "Date");
+		omp.getDateTextEdt().sendKeys(jLib.getSystemDate());
+		omp.getSearchBtn().click();
+		omp.getDetailsOfRecentOrder().click();
+		String actualProd=odp.getProducts().getText();
+		Assert.assertEquals(actualProd, product);
 	}
 }

@@ -5,9 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.client.Sales_InventoryGenericUtility.JavaUtility;
-import com.client.Sales_InventoryGenericUtility.WebDriverUtility;
-
 public class OrdersPageInAdmin {
 	
 	WebDriver driver;
