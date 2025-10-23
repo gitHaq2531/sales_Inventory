@@ -1,20 +1,11 @@
 package com.client.SalesInventory.ManageCategory;
-
-import static org.testng.Assert.assertEquals;
-
 import java.io.IOException;
-import java.util.List;
-
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.Status;
 import com.client.Sales_Inventory.BaseUtility.AdminBaseClass;
-import com.client.Sales_Inventory.BaseUtility.UtilityClassObject;
 import com.client.Sales_Inventory.ObjectRepository.AddCategory;
-import com.client.Sales_Inventory.ObjectRepository.AddProductPage;
 import com.client.Sales_Inventory.ObjectRepository.AdminHomePage;
 import com.client.Sales_InventoryGenericUtility.ExcelUtility;
 import com.client.Sales_InventoryGenericUtility.WebDriverUtility;
