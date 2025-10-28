@@ -116,6 +116,13 @@ public class AddProductPage {
 		getAdd().click();
 	}
 	
+	@FindBy(xpath="//select[@id='product:unit']/option")
+	private List<WebElement> unitList;
+	public List<WebElement> getUnitList() {
+		return unitList;
+	}
+	
+	
 	
 	
 	

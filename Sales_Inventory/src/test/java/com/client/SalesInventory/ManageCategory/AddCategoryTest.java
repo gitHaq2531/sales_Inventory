@@ -123,7 +123,7 @@ public class AddCategoryTest extends AdminBaseClass{
 				adc.getCategoryDetails().sendKeys(details77);
 				adc.getUpdateC().click();
 				wb.handleAlert(driver);
-			}
+			}		
 		}
 
 		

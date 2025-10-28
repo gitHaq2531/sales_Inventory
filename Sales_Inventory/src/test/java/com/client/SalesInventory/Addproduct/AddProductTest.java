@@ -96,7 +96,7 @@ public class AddProductTest extends AdminBaseClass{
 		app.getLogout();			
 		
 	}
-	@Test(groups="regression")
+	@Test(groups="integration")
 	public void checkAddedProduct() throws EncryptedDocumentException, IOException {
 		UtilityClassObject.getTest().log(Status.INFO, "Read the data from excel");
 		String product4 = ex.getDataFromExcel("productInfo", 4, 0);
