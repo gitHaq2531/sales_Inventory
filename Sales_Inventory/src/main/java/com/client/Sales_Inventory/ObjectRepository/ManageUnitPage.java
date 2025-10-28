@@ -30,6 +30,20 @@ public class ManageUnitPage {
 	@FindBy(xpath="//input[@value='Update Unit']")
 	private WebElement update;
 	
+	@FindBy(xpath="//input[@value='Log out']")
+	private WebElement logout;
+	
+	@FindBy(xpath="//section/h1")
+	private WebElement textPage;
+	
+	public WebElement getTextPage() {
+		return textPage;
+	}
+
+	public WebElement getLogout() {
+		return logout;
+	}
+
 	public WebElement getAddUnit() {
 		return addUnit;
 	}

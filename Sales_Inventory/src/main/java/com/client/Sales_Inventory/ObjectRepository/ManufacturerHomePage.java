@@ -1,5 +1,6 @@
 package com.client.Sales_Inventory.ObjectRepository;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +22,15 @@ public class ManufacturerHomePage {
 	
 	@FindBy(linkText = "Orders")
 	private WebElement ordersLink;
+	
+	@FindBy(linkText = "Manage Unit")
+	private WebElement unit;
+	
+	
+
+	public WebElement getUnit() {
+		return unit;
+	}
 
 	public WebElement getOrdersLink() {
 		return ordersLink;
@@ -32,6 +42,11 @@ public class ManufacturerHomePage {
 
 	public WebElement getManufactrerWelcomeMsg() {
 		return manufactrerWelcomeMsg;
+	}
+	
+	public WebElement unitPresent(String unit) {
+		return driver.findElement(By.xpath("//table[@class='table_displayData']//child::td[text()=' "+unit+" ']"));
+		
 	}
 
 }
