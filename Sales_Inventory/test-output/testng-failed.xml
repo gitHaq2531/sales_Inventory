@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.client.SalesInventory.ManageUnit.ManageUnitTest">
+      <class name="com.client.SalesInventory.Addproduct.AddProductTest">
         <methods>
           <include name="beforeClassConfigMethod"/>
           <include name="beforeSuitConfigMethod"/>
+          <include name="verifyEditProduct"/>
           <include name="configBM"/>
           <include name="configAM"/>
           <include name="afterClassConfigMethod"/>
-          <include name="verifingUnitInAddProduct"/>
           <include name="afterSuiteConfigMethod"/>
         </methods>
-      </class> <!-- com.client.SalesInventory.ManageUnit.ManageUnitTest -->
+      </class> <!-- com.client.SalesInventory.Addproduct.AddProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

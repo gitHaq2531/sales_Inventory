@@ -1,5 +1,7 @@
 package com.client.Sales_Inventory.ObjectRepository;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,6 +38,15 @@ public class ManageUnitPage {
 	@FindBy(xpath="//section/h1")
 	private WebElement textPage;
 	
+	@FindBy(xpath="//table[@class='table_displayData']/tbody/tr/td[3]")
+	private List<WebElement> unitList;
+	
+	
+
+	public List<WebElement> getUnitList() {
+		return unitList;
+	}
+
 	public WebElement getTextPage() {
 		return textPage;
 	}
