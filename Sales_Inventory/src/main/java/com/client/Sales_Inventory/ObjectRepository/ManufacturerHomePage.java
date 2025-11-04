@@ -1,5 +1,7 @@
 package com.client.Sales_Inventory.ObjectRepository;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,7 +28,19 @@ public class ManufacturerHomePage {
 	@FindBy(linkText = "Manage Unit")
 	private WebElement unit;
 	
+	@FindBy(linkText = "Products")
+	private WebElement productLink;
 	
+	@FindBy(xpath="//table[@class='table_displayData']/tbody/tr/td[3]")
+	private List<WebElement> productList;
+
+	public List<WebElement> getProductList() {
+		return productList;
+	}
+
+	public WebElement getProductLink() {
+		return productLink;
+	}
 
 	public WebElement getUnit() {
 		return unit;

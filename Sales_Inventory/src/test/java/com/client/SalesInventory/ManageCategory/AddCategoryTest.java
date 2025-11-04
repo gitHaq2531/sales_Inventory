@@ -1,5 +1,9 @@
 package com.client.SalesInventory.ManageCategory;
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
+import java.util.List;
+
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -100,6 +104,35 @@ public class AddCategoryTest extends AdminBaseClass{
 		     	   adc.getUpdateC().click();	
 		     	   wb.handleAlert(driver);
 			}
+			
+			@Test(groups="integration")
+			public void verifyCategory() throws EncryptedDocumentException, IOException {
+				String category8 = ex.getDataFromExcel("manageCt",11, 0);
+				String details8 = ex.getDataFromExcel("manageCt",11, 1);
+				AdminHomePage ahp=new AdminHomePage(driver);
+				ahp.getManageCategory().click();
+				AddCategory ac=new AddCategory(driver);
+				Actions acc=new Actions(driver);
+				acc.scrollToElement(ac.getAddCategorybtn()).scrollByAmount(0, 100).build().perform();
+				ac.getAddCategorybtn().click();
+				ac.getCName().sendKeys(category8);
+				ac.getCategoryDetails().sendKeys(details8);
+				ac.getAddNewC().click();
+				wb.handleAlert(driver);
+				ahp.getManageCategory().click();
+				boolean flag=false;
+				List<WebElement> ListOfCateg =ac.getCategoryList();
+				for(WebElement newList:ListOfCateg) {
+					String newList1 = newList.getText();
+					if(newList1.contains(category8)) {
+						flag=true;
+						break;
+						}
+				}
+				assertEquals(flag, true);
+				System.out.println("Category has been added successfully");		
+			}	
+			
 			@Test(groups="system")
 			public void addAndDeleteCategory() throws EncryptedDocumentException, IOException {
 				String category7 = ex.getDataFromExcel("manageCt", 4, 0);

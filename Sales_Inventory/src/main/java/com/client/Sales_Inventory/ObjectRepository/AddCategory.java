@@ -44,7 +44,14 @@ public class AddCategory {
 	@FindBy(xpath = "//input[@value='Update Category']")
 	private WebElement updateC;
 	
+	@FindBy(xpath="//table[@class='table_displayData']/tbody/tr/td[3]")
+	private List<WebElement> categoryList;
 	
+	
+	public List<WebElement> getCategoryList() {
+		return categoryList;
+	}
+
 	public WebElement getUpdateC() {
 		return updateC;
 	}
